@@ -1,14 +1,119 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainPage.Fragment.MainPageFragment">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- 부모 레이아웃에 layout_weight를 활용한 비율 설정 -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_MainPage_fragment" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
 
-</FrameLayout>
+        <!-- EditText -->
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:hint="Enter text here" />
+    </LinearLayout>
+
+    <!-- 가로로 두 개의 이미지 버튼 (왼쪽 정렬) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="start"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/camera_icon"
+            android:background="@android:color/transparent"
+            android:contentDescription="Image Button 1" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clear_icon"
+            android:background="@android:color/transparent"
+            android:contentDescription="Image Button 2"
+            android:layout_marginStart="12dp" />
+    </LinearLayout>
+
+    <!-- 가로로 두 개의 버튼 (중앙 정렬) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 1" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 2"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- 부모 레이아웃에 layout_weight를 활용한 비율 설정 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <!-- TextView -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="This is a large TextView"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- 가로로 두 개의 이미지 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="-20dp"
+        android:gravity="start">
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clear_icon"
+            android:background="@android:color/transparent"
+            android:contentDescription="Image Button 3" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/download_icon"
+            android:background="@android:color/transparent"
+            android:contentDescription="Image Button 4"
+            android:layout_marginStart="12dp" />
+    </LinearLayout>
+
+</LinearLayout>
