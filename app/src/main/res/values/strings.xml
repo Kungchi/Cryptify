@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Cryptify</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_MainPage_fragment">MainPageFragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_FilePage_fragment">FilePageFragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_SettingPage_fragment">SettingPageFragment</string>
 </resources>
