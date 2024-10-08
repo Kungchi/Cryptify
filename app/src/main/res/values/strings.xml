@@ -6,4 +6,52 @@
     <string name="hello_FilePage_fragment">FilePageFragment</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_SettingPage_fragment">SettingPageFragment</string>
+
+    <!-- 인코딩/디코딩 방식 선택 -->
+    <string-array name="encoding_methods">
+        <item>Base64</item>
+        <item>URL 인코딩</item>
+        <item>Hexadecimal</item>
+        <item>ASCII</item>
+        <item>UTF-8</item>
+    </string-array>
+
+    <!-- 문자 인코딩 설정 -->
+    <string-array name="character_encodings">
+        <item>UTF-8</item>
+        <item>UTF-16</item>
+        <item>ISO-8859-1</item>
+        <item>EUC-KR</item>
+    </string-array>
+
+    <!-- 입력 형식 -->
+    <string-array name="input_formats">
+        <item>텍스트</item>
+        <item>파일</item>
+    </string-array>
+
+    <!-- 출력 형식 -->
+    <string-array name="output_formats">
+        <item>텍스트</item>
+        <item>파일</item>
+    </string-array>
+
+    <!-- 테마 옵션 -->
+    <string-array name="theme_options">
+        <item>라이트 모드</item>
+        <item>다크 모드</item>
+        <item>시스템 기본값</item>
+    </string-array>
+
+    <!-- 언어 설정 -->
+    <string-array name="language_options">
+        <item>한국어</item>
+        <item>영어</item>
+        <item>일본어</item>
+        <item>중국어</item>
+    </string-array>
+
+    <!-- 스피너 프롬프트 -->
+    <string name="input_format_prompt">입력 형식을 선택하세요</string>
+    <string name="output_format_prompt">출력 형식을 선택하세요</string>
 </resources>

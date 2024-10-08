@@ -4,5 +4,7 @@
         <item name="android:textSize">12sp</item>
     </style>
 
-
+    <style name="CustomBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:maxWidth">0dp</item>
+    </style>
 </resources>
