@@ -19,6 +19,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.ksh.cryptify.Handler.CameraHandler
 import com.ksh.cryptify.Handler.FileSaveHandler
+import com.ksh.cryptify.OverlayPage.OverlayActivity
 import com.ksh.cryptify.Utility.MLkit
 import com.ksh.cryptify.Utility.endecode
 import com.ksh.cryptify.databinding.FragmentMainPageBinding
@@ -123,22 +124,21 @@ class MainPageFragment : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == cameraHandler.REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
-            Log.d("실행되나???", "실행되나??")
-            Log.d("확인하자", cameraHandler.photoURI.toString())
             cameraHandler.photoURI?.let { uri ->
-                MLkit().processImage(this, uri) { recognizedText ->
-                    recognizedText?.let {
-                        // 성공적으로 텍스트 인식 시 처리
-                        binding.editText.setText(recognizedText)
-                        Log.d("인식된 텍스트", it)
-                    } ?: run {
-                        // 텍스트 인식 실패 시 처리
-                        Log.d("오류", "텍스트 인식 실패")
+                MLkit().processImage(this, uri) { texts, boundingBoxes ->
+                    if (texts.isNotEmpty() && boundingBoxes.isNotEmpty()) {
+                        val intent = Intent(requireContext(), OverlayActivity::class.java).apply {
+                            putExtra("imageUri", uri.toString()) // Uri를 문자열로 변환하여 전달
+                            putStringArrayListExtra("texts", ArrayList(texts))
+                            putParcelableArrayListExtra("boundingBoxes", ArrayList(boundingBoxes))
+                        }
+                        startActivity(intent)
                     }
                 }
             }
         }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

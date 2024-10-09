@@ -40,6 +40,10 @@
             android:name=".MainPage.MainPageActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".OverlayPage.OverlayActivity"
+            android:exported="true">
+        </activity>
 
         <provider
             android:name="androidx.core.content.FileProvider"
