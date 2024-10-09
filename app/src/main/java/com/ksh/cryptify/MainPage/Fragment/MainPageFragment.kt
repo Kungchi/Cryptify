@@ -82,10 +82,13 @@ class MainPageFragment : Fragment() {
         }
         binding.downloadBtn.setOnClickListener {
             if(checkWritePer()) {
-                FileSaveHandler().saveFile(requireContext(),binding.textView.text.toString())
+                if(binding.textView.text.isNotEmpty()) {
+                    FileSaveHandler().saveFile(requireContext(), binding.textView.text.toString())
+                } else {
+                    Toast.makeText(requireContext(), "내용이 없습니다.", Toast.LENGTH_SHORT).show()
+                }
             } else {
-                ActivityCompat.requestPermissions(
-                    requireActivity(),
+                requestPermissions(
                     arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
                     1
                 )
@@ -95,8 +98,7 @@ class MainPageFragment : Fragment() {
             if(checkCameraPer()) {
                 cameraHandler.dispatchTakePictureIntent(this)
             } else {
-                ActivityCompat.requestPermissions(
-                    requireActivity(),
+                requestPermissions(
                     arrayOf(Manifest.permission.CAMERA),
                     101
                 )
@@ -134,6 +136,32 @@ class MainPageFragment : Fragment() {
                         }
                         startActivity(intent)
                     }
+                }
+            }
+        }
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when (requestCode) {
+            101 -> {
+                // 카메라 권한 처리
+                if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                    cameraHandler.dispatchTakePictureIntent(this)
+                } else {
+                    Toast.makeText(requireContext(), "카메라 권한이 필요합니다.", Toast.LENGTH_SHORT).show()
+                }
+            }
+            1 -> {
+                // 쓰기 권한 처리
+                if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                    FileSaveHandler().saveFile(requireContext(), binding.textView.text.toString())
+                } else {
+                    Toast.makeText(requireContext(), "파일 저장 권한이 필요합니다.", Toast.LENGTH_SHORT).show()
                 }
             }
         }

@@ -31,6 +31,7 @@
             android:background="@drawable/edittext_background"
             android:padding="16dp"
             android:textSize="18sp"
+            android:gravity="top"
             android:hint="Enter text here" />
     </androidx.cardview.widget.CardView>
 
@@ -124,7 +125,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/textview_background"
                 android:padding="16dp"
-                android:text="This is a large TextView"
+                android:hint="This is a large TextView"
                 android:textSize="18sp" />
         </androidx.cardview.widget.CardView>
     </LinearLayout>
