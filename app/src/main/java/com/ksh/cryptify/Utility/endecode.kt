@@ -5,7 +5,7 @@ import java.net.URLDecoder
 import java.net.URLEncoder
 import java.nio.charset.Charset
 
-class endecode {
+class Endecode {
 
     // Base64 인코딩
     fun encodeBase64(input: String): String {

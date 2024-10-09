@@ -14,14 +14,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.ksh.cryptify.Handler.CameraHandler
 import com.ksh.cryptify.Handler.FileSaveHandler
 import com.ksh.cryptify.OverlayPage.OverlayActivity
+import com.ksh.cryptify.Utility.Endecode
 import com.ksh.cryptify.Utility.MLkit
-import com.ksh.cryptify.Utility.endecode
 import com.ksh.cryptify.databinding.FragmentMainPageBinding
 
 class MainPageFragment : Fragment() {
@@ -43,13 +42,13 @@ class MainPageFragment : Fragment() {
     private fun buttonGroup() {
         binding.encodeBtn.setOnClickListener {
             binding.textView.text = ""
-            var encodeData = endecode().encodeBase64(binding.editText.text.toString())
+            var encodeData = Endecode().encodeBase64(binding.editText.text.toString())
             Log.d("확인용", encodeData)
             binding.textView.text = encodeData
         }
         binding.decodeBtn.setOnClickListener {
             binding.textView.text = ""
-            var decodeData = endecode().decodeBase64(binding.editText.text.toString())
+            var decodeData = Endecode().decodeBase64(binding.editText.text.toString())
             binding.textView.text = decodeData
         }
         binding.clearBtn.setOnClickListener {
