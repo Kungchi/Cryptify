@@ -128,7 +128,7 @@ class MainPageFragment : Fragment() {
                 MLkit().processImage(this, uri) { texts, boundingBoxes ->
                     if (texts.isNotEmpty() && boundingBoxes.isNotEmpty()) {
                         val intent = Intent(requireContext(), OverlayActivity::class.java).apply {
-                            putExtra("imageUri", uri.toString()) // Uri를 문자열로 변환하여 전달
+                            putExtra("imageUri", uri.toString())
                             putStringArrayListExtra("texts", ArrayList(texts))
                             putParcelableArrayListExtra("boundingBoxes", ArrayList(boundingBoxes))
                         }

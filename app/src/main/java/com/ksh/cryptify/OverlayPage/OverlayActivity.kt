@@ -61,11 +61,22 @@ class OverlayActivity : AppCompatActivity() {
             // 검은색 텍스트 그리기
             val textPaint = Paint().apply {
                 color = Color.BLACK  // 검은색 텍스트 색상 설정
-                textSize = rect.height().toFloat()  // boundingBox 높이를 글자 크기로 사용
+                textSize = rect.height().toFloat()  // 우선 박스의 높이에 맞춰 텍스트 크기를 설정
                 style = Paint.Style.FILL
+                isAntiAlias = true
             }
 
-            // 텍스트를 그려서 원본 텍스트를 덮음
+            // 텍스트 크기를 줄여서 박스 너비를 초과하지 않도록 조정
+            var textSize = rect.height().toFloat()  // 박스 높이에 맞춘 초기 텍스트 크기
+            while (textPaint.measureText(text) > rect.width()) {
+                textSize -= 1f  // 텍스트가 박스를 넘지 않을 때까지 크기를 줄임
+                textPaint.textSize = textSize
+                if (textSize <= 10f) {  // 텍스트 크기를 최소 10f로 제한
+                    break
+                }
+            }
+
+            // 텍스트를 그려서 박스에 맞춰 출력
             canvas.drawText(text, rect.left.toFloat(), rect.bottom.toFloat(), textPaint)
         }
 
@@ -78,13 +89,28 @@ class OverlayActivity : AppCompatActivity() {
                 val x = event.x
                 val y = event.y
 
+                // 이미지 크기와 터치 좌표 보정
+                val imageViewWidth = binding.capturedImageView.width
+                val imageViewHeight = binding.capturedImageView.height
+                val bitmapWidth = mutableBitmap.width
+                val bitmapHeight = mutableBitmap.height
+
+                val scaleFactor = if (bitmapWidth.toFloat() / imageViewWidth > bitmapHeight.toFloat() / imageViewHeight) {
+                    imageViewWidth.toFloat() / bitmapWidth.toFloat()
+                } else {
+                    imageViewHeight.toFloat() / bitmapHeight.toFloat()
+                }
+
+                val adjustedX = ((x - (imageViewWidth - bitmapWidth * scaleFactor) / 2) / scaleFactor).toInt()
+                val adjustedY = ((y - (imageViewHeight - bitmapHeight * scaleFactor) / 2) / scaleFactor).toInt()
+
                 // 클릭된 좌표가 텍스트의 boundingBox 내에 있는지 확인
                 for (i in texts.indices) {
                     val rect = boundingBoxes[i]
-                    if (rect.contains(x.toInt(), y.toInt())) {
+                    if (rect.contains(adjustedX, adjustedY)) {
                         val clickedText = texts[i]
 
-                        // 텍스트를 클립보드에 복사
+                        // 텍스트를 클립보드에 복사 (원본 텍스트 복사)
                         copyTextToClipboard(clickedText)
 
                         // 사용자에게 알림
@@ -102,6 +128,7 @@ class OverlayActivity : AppCompatActivity() {
         val clip = ClipData.newPlainText("Copied Text", text)
         clipboard.setPrimaryClip(clip)
     }
+
 
     // 이미지 회전 처리 함수
     fun rotateImageIfRequired(imageUri: Uri, bitmap: Bitmap, context: Context): Bitmap {

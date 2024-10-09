@@ -4,16 +4,16 @@ import android.graphics.Rect
 import android.net.Uri
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
-import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import java.io.IOException
 import androidx.fragment.app.Fragment
+import com.google.mlkit.vision.text.korean.KoreanTextRecognizerOptions
 
 class MLkit {
 
     fun processImage(fragment: Fragment, uri: Uri, callback: (List<String>, List<Rect>) -> Unit) {
         try {
             val image = InputImage.fromFilePath(fragment.requireContext(), uri)
-            val recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
+            val recognizer = TextRecognition.getClient(KoreanTextRecognizerOptions.Builder().build())
 
             recognizer.process(image)
                 .addOnSuccessListener { visionText ->
