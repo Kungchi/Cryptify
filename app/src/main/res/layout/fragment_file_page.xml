@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainPage.Fragment.FilePageFragment">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- 이미지 버튼 (파일 선택 버튼) -->
+    <ImageButton
+        android:id="@+id/fileSelectButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/file_icon"
+        android:contentDescription="파일 아이콘"
+        android:layout_gravity="center"
+        android:background="?android:selectableItemBackgroundBorderless"/>
+
+    <!-- 파일 이름 표시 텍스트 -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_FilePage_fragment" />
+        android:id="@+id/fileNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=".txt 파일 이름이 여기에 표시됩니다."
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:textSize="16sp"/>
 
-</FrameLayout>
+    <!-- 인코딩 버튼 -->
+    <Button
+        android:id="@+id/encodeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인코딩"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center"/>
+
+    <!-- 디코딩 버튼 -->
+    <Button
+        android:id="@+id/decodeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="디코딩"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

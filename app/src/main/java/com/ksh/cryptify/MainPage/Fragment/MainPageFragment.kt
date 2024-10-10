@@ -82,7 +82,7 @@ class MainPageFragment : Fragment() {
         binding.downloadBtn.setOnClickListener {
             if(checkWritePer()) {
                 if(binding.textView.text.isNotEmpty()) {
-                    FileSaveHandler().saveFile(requireContext(), binding.textView.text.toString())
+                    FileSaveHandler().saveFile(requireContext(), binding.textView.text.toString(), binding.textView.text.toString())
                 } else {
                     Toast.makeText(requireContext(), "내용이 없습니다.", Toast.LENGTH_SHORT).show()
                 }
@@ -158,7 +158,7 @@ class MainPageFragment : Fragment() {
             1 -> {
                 // 쓰기 권한 처리
                 if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
-                    FileSaveHandler().saveFile(requireContext(), binding.textView.text.toString())
+                    FileSaveHandler().saveFile(requireContext(), binding.textView.text.toString(), binding.textView.text.toString())
                 } else {
                     Toast.makeText(requireContext(), "파일 저장 권한이 필요합니다.", Toast.LENGTH_SHORT).show()
                 }
