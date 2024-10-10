@@ -10,15 +10,19 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.ksh.cryptify.Handler.CameraHandler
 import com.ksh.cryptify.Handler.FileSaveHandler
 import com.ksh.cryptify.OverlayPage.OverlayActivity
+import com.ksh.cryptify.R
+import com.ksh.cryptify.Utility.CustomToast
 import com.ksh.cryptify.Utility.Endecode
 import com.ksh.cryptify.Utility.MLkit
 import com.ksh.cryptify.databinding.FragmentMainPageBinding
@@ -27,6 +31,7 @@ class MainPageFragment : Fragment() {
     private var _binding: FragmentMainPageBinding? = null
     private val binding get() = _binding!!
     private lateinit var cameraHandler: CameraHandler
+    private lateinit var endecode: Endecode
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,6 +39,7 @@ class MainPageFragment : Fragment() {
     ): View? {
         _binding = FragmentMainPageBinding.inflate(inflater, container, false)
         cameraHandler = CameraHandler()
+        endecode = Endecode()
 
         buttonGroup()
         return binding.root
@@ -42,13 +48,15 @@ class MainPageFragment : Fragment() {
     private fun buttonGroup() {
         binding.encodeBtn.setOnClickListener {
             binding.textView.text = ""
-            var encodeData = Endecode().encodeBase64(binding.editText.text.toString())
+            val inputText = binding.editText.text.toString()
+            val encodeData = endecode.processText(requireContext(), inputText, true)
             Log.d("확인용", encodeData)
             binding.textView.text = encodeData
         }
         binding.decodeBtn.setOnClickListener {
             binding.textView.text = ""
-            var decodeData = Endecode().decodeBase64(binding.editText.text.toString())
+            val inputText = binding.editText.text.toString()
+            val decodeData = endecode.processText(requireContext(), inputText, false)
             binding.textView.text = decodeData
         }
         binding.clearBtn.setOnClickListener {
@@ -60,23 +68,23 @@ class MainPageFragment : Fragment() {
         binding.copyBtn.setOnClickListener {
             val text = binding.editText.text.toString()
             if(text.isEmpty()) {
-                Toast.makeText(requireContext(), "복사할 내용이 없습니다.", Toast.LENGTH_SHORT).show()
+                CustomToast.show(requireContext(),getString(R.string.toast_no_copy_content))
             } else {
                 val clipboard = requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                 val clip = ClipData.newPlainText("Copied Text", text)
                 clipboard.setPrimaryClip(clip)
-                Toast.makeText(requireContext(), "내용이 복사되었습니다.", Toast.LENGTH_SHORT).show()
+                CustomToast.show(requireContext(),getString(R.string.toast_copied))
             }
         }
         binding.copyBtn2.setOnClickListener {
             val text = binding.textView.text.toString()
             if(text.isEmpty()) {
-                Toast.makeText(requireContext(), "복사할 내용이 없습니다.", Toast.LENGTH_SHORT).show()
+                CustomToast.show(requireContext(),getString(R.string.toast_no_copy_content))
             } else {
                 val clipboard = requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                 val clip = ClipData.newPlainText("Copied Text", text)
                 clipboard.setPrimaryClip(clip)
-                Toast.makeText(requireContext(), "내용이 복사되었습니다.", Toast.LENGTH_SHORT).show()
+                CustomToast.show(requireContext(),getString(R.string.toast_copied))
             }
         }
         binding.downloadBtn.setOnClickListener {
@@ -84,7 +92,7 @@ class MainPageFragment : Fragment() {
                 if(binding.textView.text.isNotEmpty()) {
                     FileSaveHandler().saveFile(requireContext(), binding.textView.text.toString(), binding.textView.text.toString())
                 } else {
-                    Toast.makeText(requireContext(), "내용이 없습니다.", Toast.LENGTH_SHORT).show()
+                    CustomToast.show(requireContext(),getString(R.string.toast_no_content))
                 }
             } else {
                 requestPermissions(
@@ -152,7 +160,7 @@ class MainPageFragment : Fragment() {
                 if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                     cameraHandler.dispatchTakePictureIntent(this)
                 } else {
-                    Toast.makeText(requireContext(), "카메라 권한이 필요합니다.", Toast.LENGTH_SHORT).show()
+                    CustomToast.show(requireContext(),getString(R.string.toast_camera_permission_needed))
                 }
             }
             1 -> {
@@ -160,7 +168,7 @@ class MainPageFragment : Fragment() {
                 if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                     FileSaveHandler().saveFile(requireContext(), binding.textView.text.toString(), binding.textView.text.toString())
                 } else {
-                    Toast.makeText(requireContext(), "파일 저장 권한이 필요합니다.", Toast.LENGTH_SHORT).show()
+                    CustomToast.show(requireContext(),getString(R.string.toast_write_permission_needed))
                 }
             }
         }

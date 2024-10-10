@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Cryptify - Decode, Encode</string>
+    <string name="app_name" translatable="false">Cryptify - Decode, Encode</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_MainPage_fragment">MainPageFragment</string>
+    <string name="hello_MainPage_fragment" translatable="false">MainPageFragment</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_FilePage_fragment">FilePageFragment</string>
+    <string name="hello_FilePage_fragment" translatable="false">FilePageFragment</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_SettingPage_fragment">SettingPageFragment</string>
+    <string name="hello_SettingPage_fragment" translatable="false">SettingPageFragment</string>
 
     <!-- 인코딩/디코딩 방식 선택 -->
     <string-array name="encoding_methods">
@@ -26,8 +26,38 @@
     <!-- 언어 설정 -->
     <string-array name="language_options">
         <item>한국어</item>
-        <item>영어</item>
-        <item>일본어</item>
-        <item>중국어</item>
+        <item>영어(English)</item>
+        <item>일본어(Japanese)</item>
+        <item>중국어(Chinese)</item>
     </string-array>
+
+    <!-- 셋팅 페이지 -->
+    <string name="setting_endecode">인코딩/디코딩 설정</string>
+    <string name="setting_setup_endecode">인코딩/디코딩 방식 선택</string>
+    <string name="setting_copy">결과 자동 복사</string>
+    <string name="setting_interface">인터페이스 설정</string>
+    <string name="setting_theme">테마 설정</string>
+    <string name="setting_Language">언어 설정</string>
+    <string name="setting_Guide">사용자 가이드</string>
+    <string name="setting_feedback">버그 신고 및 피드백</string>
+
+    <!-- 파일 페이지 -->
+    <string name="file_name">파일 이름이 여기에 표시됩니다.</string>
+
+    <!-- 메인 페이지 -->
+    <string name="edit_textView">텍스트를 입력하시오.</string>
+    <string name="output_textView">결과가 출력됩니다.</string>
+
+    <!-- 공통 버튼 -->
+    <string name="encode_btn">인코딩</string>
+    <string name="decode_btn">디코딩</string>
+
+    <!-- toast -->
+    <string name="toast_no_copy_content">복사할 내용이 없습니다.</string>
+    <string name="toast_no_content">내용이 없습니다.</string>
+    <string name="toast_copied">내용이 복사되었습니다.</string>
+    <string name="toast_camera_permission_needed">카메라 권한이 필요합니다.</string>
+    <string name="toast_write_permission_needed">파일 저장 권한이 필요합니다.</string>
+    <string name="toast_no_file_name">파일 이름을 찾을 수 없습니다.</string>
+    <string name="toast_select_file">파일을 선택하세요.</string>
 </resources>

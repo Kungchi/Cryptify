@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/settings_scroll_view"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainPage.Fragment.SettingPageFragment">
+    android:orientation="vertical"
+    android:gravity="center">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="인코딩/디코딩 설정"
+            android:text="@string/setting_endecode"
             android:textStyle="bold"
             android:textSize="18sp"
             android:paddingBottom="8dp" />
@@ -36,7 +36,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="인코딩/디코딩 방식 선택"
+                android:text="@string/setting_setup_endecode"
                 android:textStyle="bold"
                 android:paddingTop="8dp" />
 
@@ -59,30 +59,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="결과 자동 복사" />
+                    android:text="@string/setting_copy" />
 
                 <Switch
                     android:id="@+id/auto_copy_switch"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <!-- 자동 변환 기능 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:paddingTop="8dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="자동 변환" />
-
-                <Switch
-                    android:id="@+id/auto_convert_switch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -97,7 +77,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="인터페이스 설정"
+            android:text="@string/setting_interface"
             android:textStyle="bold"
             android:textSize="18sp"
             android:paddingBottom="8dp" />
@@ -117,7 +97,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="테마 설정"
+                android:text="@string/setting_theme"
                 android:textStyle="bold" />
 
             <Spinner
@@ -132,7 +112,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="언어 설정"
+                android:text="@string/setting_Language"
                 android:textStyle="bold"
                 android:paddingTop="16dp" />
 
@@ -169,15 +149,15 @@
                 android:id="@+id/user_guide_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="사용자 가이드" />
+                android:text="@string/setting_Guide" />
 
             <Button
                 android:id="@+id/feedback_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="버그 신고 및 피드백"
+                android:text="@string/setting_feedback"
                 android:layout_marginTop="8dp" />
         </LinearLayout>
 
     </LinearLayout>
-</ScrollView>
+</LinearLayout>

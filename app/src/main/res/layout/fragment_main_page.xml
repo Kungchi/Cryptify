@@ -32,7 +32,7 @@
             android:padding="16dp"
             android:textSize="18sp"
             android:gravity="top"
-            android:hint="Enter text here" />
+            android:hint="@string/edit_textView" />
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>
@@ -91,13 +91,13 @@
             android:id="@+id/encode_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="인코딩" />
+            android:text="@string/encode_btn" />
 
         <Button
             android:id="@+id/decode_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="디코딩"
+            android:text="@string/decode_btn"
             android:layout_marginStart="8dp" />
     </LinearLayout>
 
@@ -125,7 +125,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/textview_background"
                 android:padding="16dp"
-                android:hint="This is a large TextView"
+                android:hint="@string/output_textView"
                 android:textSize="18sp" />
         </androidx.cardview.widget.CardView>
     </LinearLayout>

@@ -1,5 +1,6 @@
 package com.ksh.cryptify.Utility
 
+import android.content.Context
 import android.util.Base64
 import java.net.URLDecoder
 import java.net.URLEncoder
@@ -67,5 +68,34 @@ class Endecode {
     // UTF-8 디코딩
     fun decodeUtf8(input: ByteArray): String {
         return String(input, Charsets.UTF_8)
+    }
+
+    fun processText(context: Context, inputText: String, isEncoding: Boolean): String {
+        // 설정한 인코딩/디코딩 방식 가져오기
+        val sharedPreferences = context.getSharedPreferences("settings", Context.MODE_PRIVATE)
+        val selectedMethod = sharedPreferences.getInt("encoding_method", 0)
+
+        // 인코딩/디코딩 처리
+        return if (isEncoding) {
+            // 인코딩
+            when (selectedMethod) {
+                0 -> encodeBase64(inputText)   // Base64
+                1 -> encodeUrl(inputText)      // URL 인코딩
+                2 -> encodeHex(inputText)      // Hexadecimal
+                3 -> encodeAscii(inputText)    // ASCII
+                4 -> String(encodeUtf8(inputText)) // UTF-8
+                else -> inputText  // 기본값
+            }
+        } else {
+            // 디코딩
+            when (selectedMethod) {
+                0 -> decodeBase64(inputText)   // Base64
+                1 -> decodeUrl(inputText)      // URL 디코딩
+                2 -> decodeHex(inputText)      // Hexadecimal
+                3 -> decodeAscii(inputText)    // ASCII
+                4 -> decodeUtf8(inputText.toByteArray()) // UTF-8
+                else -> inputText  // 기본값
+            }
+        }
     }
 }

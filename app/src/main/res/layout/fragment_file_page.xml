@@ -22,7 +22,7 @@
         android:id="@+id/fileNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=".txt 파일 이름이 여기에 표시됩니다."
+        android:text="@string/file_name"
         android:layout_marginTop="16dp"
         android:layout_gravity="center"
         android:textSize="16sp"/>
@@ -32,7 +32,7 @@
         android:id="@+id/encodeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="인코딩"
+        android:text="@string/encode_btn"
         android:layout_marginTop="24dp"
         android:layout_gravity="center"/>
 
@@ -41,7 +41,7 @@
         android:id="@+id/decodeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="디코딩"
+        android:text="@string/decode_btn"
         android:layout_marginTop="16dp"
         android:layout_gravity="center"/>
 

@@ -99,7 +99,7 @@ class FileSaveHandler {
 
         fileContent?.let { content ->
             // 인코딩 처리
-            val encodedContent = Endecode().encodeBase64(content)
+            val encodedContent = Endecode().processText(context, content, true)
 
             // 파일 저장 (파일 이름에 "_Encode" 추가)
             val newFileName = "${fileName}_Encode.txt"
@@ -119,7 +119,7 @@ class FileSaveHandler {
 
         fileContent?.let { content ->
             // 디코딩 처리
-            val decodedContent = Endecode().decodeBase64(content)
+            val decodedContent = Endecode().processText(context, content, false)
 
             // 파일 저장 (파일 이름에 "_Decode" 추가)
             val newFileName = "${fileName}_Decode.txt"

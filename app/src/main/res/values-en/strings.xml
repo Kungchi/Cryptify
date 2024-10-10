@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Encoding/Decoding Methods -->
+    <string-array name="encoding_methods">
+        <item>Base64</item>
+        <item>URL Encoding</item>
+        <item>Hexadecimal</item>
+        <item>ASCII</item>
+        <item>UTF-8</item>
+    </string-array>
+
+    <!-- Theme Options -->
+    <string-array name="theme_options">
+        <item>Light Mode</item>
+        <item>Dark Mode</item>
+        <item>System Default</item>
+    </string-array>
+
+    <!-- Language setting -->
+    <string-array name="language_options">
+        <item>Korean(한국어)</item>
+        <item>English</item>
+        <item>Japanese(日本語)</item>
+        <item>Chinese(中文)</item>
+    </string-array>
+
+    <!-- Setting Page -->
+    <string name="setting_endecode">Encoding/Decoding Settings</string>
+    <string name="setting_setup_endecode">Select Encoding/Decoding Method</string>
+    <string name="setting_copy">Auto Copy Result</string>
+    <string name="setting_interface">Interface Settings</string>
+    <string name="setting_theme">Theme Settings</string>
+    <string name="setting_Language">Language Settings</string>
+    <string name="setting_Guide">User Guide</string>
+    <string name="setting_feedback">Report Bugs and Feedback</string>
+
+    <!-- File Page -->
+    <string name="file_name">File name will be displayed here.</string>
+
+    <!-- Main Page-->
+    <string name="edit_textView">Enter text here</string>
+    <string name="output_textView">The result will be displayed here</string>
+
+    <!-- Common Buttons -->
+    <string name="encode_btn">Encode</string>
+    <string name="decode_btn">Decode</string>
+
+    <!-- toast -->
+    <string name="toast_no_copy_content">No content to copy.</string>
+    <string name="toast_no_content">No content available.</string>
+    <string name="toast_copied">Content copied.</string>
+    <string name="toast_camera_permission_needed">Camera permission is required.</string>
+    <string name="toast_write_permission_needed">Write permission is required.</string>
+</resources>
