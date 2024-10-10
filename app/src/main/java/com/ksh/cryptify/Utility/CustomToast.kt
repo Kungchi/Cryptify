@@ -9,7 +9,7 @@ import com.ksh.cryptify.R
 
 class CustomToast {
     companion object {
-        fun show(context: Context, message: String) {
+        fun show(context: Context, message: String, upDown : Boolean = true) {
             val inflater = LayoutInflater.from(context)
             val layout = inflater.inflate(R.layout.custom_toast, null)
 
@@ -23,7 +23,11 @@ class CustomToast {
             toast.view = layout
 
             // 위치 조정 (예: 화면 상단에 표시)
-            toast.setGravity(Gravity.TOP or Gravity.CENTER_HORIZONTAL, 0, 100)
+            if(upDown) {
+                toast.setGravity(Gravity.TOP or Gravity.CENTER_HORIZONTAL, 0, 100)
+            } else {
+                toast.setGravity(Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL, 0, 100)
+            }
             toast.show()
         }
     }

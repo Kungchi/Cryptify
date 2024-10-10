@@ -16,6 +16,8 @@ import android.view.MotionEvent
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.exifinterface.media.ExifInterface
+import com.ksh.cryptify.R
+import com.ksh.cryptify.Utility.CustomToast
 import com.ksh.cryptify.databinding.ActivityOverlayBinding
 
 class OverlayActivity : AppCompatActivity() {
@@ -114,7 +116,7 @@ class OverlayActivity : AppCompatActivity() {
                         copyTextToClipboard(clickedText)
 
                         // 사용자에게 알림
-                        Toast.makeText(this, "텍스트가 복사되었습니다: $clickedText", Toast.LENGTH_SHORT).show()
+                        CustomToast.show(this, getString(R.string.toast_text_copied, clickedText), upDown = false)
                         break
                     }
                 }

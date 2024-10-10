@@ -7,33 +7,30 @@
     app:cardCornerRadius="12dp"
     app:cardElevation="3dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:paddingStart="20dp"
-        android:paddingEnd="20dp">
+        android:paddingEnd="20dp"
+        android:gravity="center_vertical">
 
         <TextView
             android:id="@+id/custom_toast_message"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:text="Hello World!"
+            android:maxWidth="250dp"
+            android:text="hello world!"
             android:textColor="@android:color/white"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/ivSample"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="15sp" />
 
         <ImageView
             android:id="@+id/ivSample"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@mipmap/ic_launcher"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/custom_toast_message"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:src="@mipmap/ic_launcher" />
+
+    </LinearLayout>
 </androidx.cardview.widget.CardView>

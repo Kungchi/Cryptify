@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- এনকোডিং/ডিকোডিং পদ্ধতি নির্বাচন -->
+    <string-array name="encoding_methods">
+        <item>Base64</item>
+        <item>URL এনকোডিং</item>
+        <item>হেক্সাডেসিম্যাল</item> <!-- 16진수 -->
+        <item>ASCII</item>
+        <item>UTF-8</item>
+    </string-array>
+
+    <!-- থিমের বিকল্প -->
+    <string-array name="theme_options">
+        <item>লাইট মোড</item> <!-- 라이트 모드 -->
+        <item>ডার্ক মোড</item> <!-- 다크 모드 -->
+        <item>সিস্টেম ডিফল্ট</item> <!-- 시스템 기본값 -->
+    </string-array>
+
+    <!-- ভাষার সেটিংস -->
+    <string-array name="language_options">
+        <item>কোরিয়ান(한국어)</item>  <!-- 한국어 -->
+        <item>ইংরেজি(English)</item>  <!-- 영어 -->
+        <item>জাপানি(日本語)</item>  <!-- 일본어 -->
+        <item>চীনা(中文)</item>  <!-- 중국어 -->
+        <item>হিন্দি(हिन्दी)</item>  <!-- 힌디어 -->
+        <item>উর্দু(اردو)</item>  <!-- 우르두어 -->
+        <item>স্প্যানিশ(Español)</item>  <!-- 스페인어 -->
+        <item>আরবি(العربية)</item>  <!-- 아랍어 -->
+        <item>পর্তুগিজ(Português)</item>  <!-- 포르투갈어 -->
+        <item>বাংলা</item>  <!-- 벵골어 -->
+        <item>রুশ(Русский)</item>  <!-- 러시아어 -->
+        <item>জার্মান(Deutsch)</item>  <!-- 독일어 -->
+        <item>ফরাসি(Français)</item>  <!-- 프랑스어 -->
+        <item>তুর্কি(Türkçe)</item>  <!-- 터키어 -->
+        <item>ইতালিয়ান(Italiano)</item>  <!-- 이탈리아어 -->
+    </string-array>
+
+    <!-- সেটিং পৃষ্ঠা -->
+    <string name="setting_endecode">এনকোডিং/ডিকোডিং সেটিংস</string> <!-- 인코딩/디코딩 설정 -->
+    <string name="setting_setup_endecode">এনকোডিং/ডিকোডিং পদ্ধতি নির্বাচন করুন</string> <!-- 인코딩/디코딩 방식 선택 -->
+    <string name="setting_copy">ফলাফল স্বয়ংক্রিয়ভাবে অনুলিপি করুন</string> <!-- 결과 자동 복사 -->
+    <string name="setting_interface">ইন্টারফেস সেটিংস</string> <!-- 인터페이스 설정 -->
+    <string name="setting_theme">থিম সেটিংস</string> <!-- 테마 설정 -->
+    <string name="setting_Language">ভাষার সেটিংস</string> <!-- 언어 설정 -->
+    <string name="setting_Guide">ব্যবহারকারী নির্দেশিকা</string> <!-- 사용자 가이드 -->
+    <string name="setting_feedback">বাগ রিপোর্ট এবং প্রতিক্রিয়া</string> <!-- 버그 신고 및 피드백 -->
+
+    <!-- ফাইল পৃষ্ঠা -->
+    <string name="file_name">ফাইলের নাম এখানে প্রদর্শিত হবে।</string> <!-- 파일 이름이 여기에 표시됩니다. -->
+
+    <!-- প্রধান পৃষ্ঠা -->
+    <string name="edit_textView">দয়া করে পাঠ্য লিখুন।</string> <!-- 텍스트를 입력하시오. -->
+    <string name="output_textView">ফলাফল এখানে প্রদর্শিত হবে।</string> <!-- 결과가 출력됩니다. -->
+
+    <!-- সাধারণ বোতাম -->
+    <string name="encode_btn">এনকোড</string> <!-- 인코딩 -->
+    <string name="decode_btn">ডিকোড</string> <!-- 디코딩 -->
+
+    <!-- টোস্ট -->
+    <string name="toast_no_copy_content">অনুলিপি করার জন্য কোনো বিষয়বস্তু নেই।</string> <!-- 복사할 내용이 없습니다. -->
+    <string name="toast_no_content">কোনো বিষয়বস্তু নেই।</string> <!-- 내용이 없습니다. -->
+    <string name="toast_copied">বিষয়বস্তু অনুলিপি করা হয়েছে।</string> <!-- 내용이 복사되었습니다. -->
+    <string name="toast_camera_permission_needed">ক্যামেরার অনুমতি প্রয়োজন।</string> <!-- 카메라 권한이 필요합니다. -->
+    <string name="toast_write_permission_needed">ফাইল সংরক্ষণের অনুমতি প্রয়োজন।</string> <!-- 파일 저장 권한이 필요합니다. -->
+    <string name="toast_no_file_name">ফাইলের নাম পাওয়া যায়নি।</string> <!-- 파일 이름을 찾을 수 없습니다. -->
+    <string name="toast_select_file">অনুগ্রহ করে একটি ফাইল নির্বাচন করুন।</string> <!-- 파일을 선택하세요. -->
+    <string name="toast_no_file_app">ফাইল নির্বাচন করার জন্য কোনো অ্যাপ নেই।</string> <!-- 파일을 선택할 수 있는 앱이 없습니다. -->
+    <string name="toast_file_saved">ফাইলটি ডাউনলোড করা হয়েছে: %1$s</string> <!-- 파일이 다운로드되었습니다: %1$s -->
+    <string name="toast_file_save_error">ফাইল সংরক্ষণে ত্রুটি ঘটেছে।</string> <!-- 파일 저장 중 오류가 발생했습니다. -->
+    <string name="toast_file_encode_saved">ফাইলটি এনকোড করা হয়েছে এবং সংরক্ষণ করা হয়েছে: %1$s</string> <!-- 파일이 인코딩되어 저장되었습니다: %1$s -->
+    <string name="toast_file_decode_saved">ফাইলটি ডিকোড করা হয়েছে এবং সংরক্ষণ করা হয়েছে: %1$s</string> <!-- 파일이 디코딩되어 저장되었습니다: %1$s -->
+    <string name="toast_file_read_error">ফাইল পড়ার সময় ত্রুটি ঘটেছে।</string> <!-- 파일을 읽는 중 오류가 발생했습니다. -->
+    <string name="toast_text_copied">পাঠ্যটি অনুলিপি করা হয়েছে: %1$s</string> <!-- 텍스트가 복사되었습니다: %1$s -->
+
+    <!-- মেনু -->
+    <string name="menu_home">হোম</string> <!-- 홈 -->
+    <string name="menu_file">ফাইল</string> <!-- 파일 -->
+    <string name="menu_setting">সেটিংস</string> <!-- 설정 -->
+
+</resources>

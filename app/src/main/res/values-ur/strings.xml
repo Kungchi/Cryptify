@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- انکوڈنگ/ڈیکوڈنگ طریقہ کا انتخاب -->
+    <string-array name="encoding_methods">
+        <item>Base64</item>
+        <item>URL انکوڈنگ</item>
+        <item>سولہ ہندسی</item> <!-- 16진수 -->
+        <item>ASCII</item>
+        <item>UTF-8</item>
+    </string-array>
+
+    <!-- تھیم کے اختیارات -->
+    <string-array name="theme_options">
+        <item>لائٹ موڈ</item> <!-- 라이트 모드 -->
+        <item>ڈارک موڈ</item> <!-- 다크 모드 -->
+        <item>سسٹم ڈیفالٹ</item> <!-- 시스템 기본값 -->
+    </string-array>
+
+    <!-- زبان کی ترتیبات -->
+    <string-array name="language_options">
+        <item>کورین(한국어)</item>  <!-- 한국어 -->
+        <item>انگریزی(English)</item>  <!-- 영어 -->
+        <item>جاپانی(日本語)</item>  <!-- 일본어 -->
+        <item>چینی(中文)</item>  <!-- 중국어 -->
+        <item>ہندی(हिन्दी)</item>  <!-- 힌디어 -->
+        <item>اردو</item>  <!-- 우르두어 -->
+        <item>ہسپانوی(Español)</item>  <!-- 스페인어 -->
+        <item>عربی(العربية)</item>  <!-- 아랍어 -->
+        <item>پرتگالی(Português)</item>  <!-- 포르투갈어 -->
+        <item>بنگالی(বাংলা)</item>  <!-- 벵골어 -->
+        <item>روسی(Русский)</item>  <!-- 러시아어 -->
+        <item>جرمن(Deutsch)</item>  <!-- 독일어 -->
+        <item>فرانسیسی(Français)</item>  <!-- 프랑스어 -->
+        <item>ترکی(Türkçe)</item>  <!-- 터키어 -->
+        <item>اطالوی(Italiano)</item>  <!-- 이탈리아어 -->
+    </string-array>
+
+    <!-- سیٹنگ صفحہ -->
+    <string name="setting_endecode">انکوڈنگ/ڈیکوڈنگ کی ترتیبات</string> <!-- 인코딩/디코딩 설정 -->
+    <string name="setting_setup_endecode">انکوڈنگ/ڈیکوڈنگ کا طریقہ منتخب کریں</string> <!-- 인코딩/디코딩 방식 선택 -->
+    <string name="setting_copy">نتائج خود بخود نقل کریں</string> <!-- 결과 자동 복사 -->
+    <string name="setting_interface">انٹرفیس کی ترتیبات</string> <!-- 인터페이스 설정 -->
+    <string name="setting_theme">تھیم کی ترتیبات</string> <!-- 테마 설정 -->
+    <string name="setting_Language">زبان کی ترتیبات</string> <!-- 언어 설정 -->
+    <string name="setting_Guide">صارف ہدایت نامہ</string> <!-- 사용자 가이드 -->
+    <string name="setting_feedback">بگ رپورٹ اور فیڈبیک</string> <!-- 버그 신고 및 피드백 -->
+
+    <!-- فائل صفحہ -->
+    <string name="file_name">فائل کا نام یہاں ظاہر ہوگا۔</string> <!-- 파일 이름이 여기에 표시됩니다. -->
+
+    <!-- مرکزی صفحہ -->
+    <string name="edit_textView">براہ کرم متن درج کریں۔</string> <!-- 텍스트를 입력하시오. -->
+    <string name="output_textView">نتیجہ یہاں ظاہر ہوگا۔</string> <!-- 결과가 출력됩니다. -->
+
+    <!-- عمومی بٹن -->
+    <string name="encode_btn">انکوڈنگ</string> <!-- 인코딩 -->
+    <string name="decode_btn">ڈیکوڈنگ</string> <!-- 디코딩 -->
+
+    <!-- ٹوسٹ -->
+    <string name="toast_no_copy_content">نقل کرنے کے لئے کوئی مواد موجود نہیں ہے۔</string> <!-- 복사할 내용이 없습니다. -->
+    <string name="toast_no_content">کوئی مواد موجود نہیں ہے۔</string> <!-- 내용이 없습니다. -->
+    <string name="toast_copied">مواد نقل کر دیا گیا ہے۔</string> <!-- 내용이 복사되었습니다. -->
+    <string name="toast_camera_permission_needed">کیمرے کی اجازت درکار ہے۔</string> <!-- 카메라 권한이 필요합니다. -->
+    <string name="toast_write_permission_needed">فائل محفوظ کرنے کی اجازت درکار ہے۔</string> <!-- 파일 저장 권한이 필요합니다. -->
+    <string name="toast_no_file_name">فائل کا نام نہیں ملا۔</string> <!-- 파일 이름을 찾을 수 없습니다. -->
+    <string name="toast_select_file">براہ کرم ایک فائل منتخب کریں۔</string> <!-- 파일을 선택하세요. -->
+    <string name="toast_no_file_app">فائل منتخب کرنے کے لئے کوئی ایپ دستیاب نہیں ہے۔</string> <!-- 파일을 선택할 수 있는 앱이 없습니다. -->
+    <string name="toast_file_saved">فائل ڈاؤن لوڈ ہو گئی ہے: %1$s</string> <!-- 파일이 다운로드되었습니다: %1$s -->
+    <string name="toast_file_save_error">فائل محفوظ کرتے وقت خرابی ہوئی۔</string> <!-- 파일 저장 중 오류가 발생했습니다. -->
+    <string name="toast_file_encode_saved">فائل انکوڈ کر کے محفوظ کر دی گئی ہے: %1$s</string> <!-- 파일이 인코딩되어 저장되었습니다: %1$s -->
+    <string name="toast_file_decode_saved">فائل ڈیکوڈ کر کے محفوظ کر دی گئی ہے: %1$s</string> <!-- 파일이 디코딩되어 저장되었습니다: %1$s -->
+    <string name="toast_file_read_error">فائل پڑھتے وقت خرابی ہوئی۔</string> <!-- 파일을 읽는 중 오류가 발생했습니다. -->
+    <string name="toast_text_copied">متن نقل کر دیا گیا ہے: %1$s</string> <!-- 텍스트가 복사되었습니다: %1$s -->
+
+    <!-- مینو -->
+    <string name="menu_home">ہوم</string> <!-- 홈 -->
+    <string name="menu_file">فائل</string> <!-- 파일 -->
+    <string name="menu_setting">سیٹنگ</string> <!-- 설정 -->
+
+</resources>

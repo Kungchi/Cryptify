@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Kodlama/Çözme yöntemi seçimi -->
+    <string-array name="encoding_methods">
+        <item>Base64</item>
+        <item>URL Kodlama</item>
+        <item>Onaltılık</item> <!-- 16진수 -->
+        <item>ASCII</item>
+        <item>UTF-8</item>
+    </string-array>
+
+    <!-- Tema seçenekleri -->
+    <string-array name="theme_options">
+        <item>Açık Mod</item> <!-- 라이트 모드 -->
+        <item>Karanlık Mod</item> <!-- 다크 모드 -->
+        <item>Sistem Varsayılanı</item> <!-- 시스템 기본값 -->
+    </string-array>
+
+    <!-- Dil ayarları -->
+    <string-array name="language_options">
+        <item>Korece(한국어)</item>  <!-- 한국어 -->
+        <item>İngilizce(English)</item>  <!-- 영어 -->
+        <item>Japonca(日本語)</item>  <!-- 일본어 -->
+        <item>Çince(中文)</item>  <!-- 중국어 -->
+        <item>Hintçe(हिन्दी)</item>  <!-- 힌디어 -->
+        <item>Urduca(اردو)</item>  <!-- 우르두어 -->
+        <item>İspanyolca(Español)</item>  <!-- 스페인어 -->
+        <item>Arapça(العربية)</item>  <!-- 아랍어 -->
+        <item>Portekizce(Português)</item>  <!-- 포르투갈어 -->
+        <item>Bengalce(বাংলা)</item>  <!-- 벵골어 -->
+        <item>Rusça(Русский)</item>  <!-- 러시아어 -->
+        <item>Almanca(Deutsch)</item>  <!-- 독일어 -->
+        <item>Fransızca(Français)</item>  <!-- 프랑스어 -->
+        <item>Türkçe</item>  <!-- 터키어 -->
+        <item>İtalyanca(Italiano)</item>  <!-- 이탈리아어 -->
+    </string-array>
+
+    <!-- Ayarlar sayfası -->
+    <string name="setting_endecode">Kodlama/Çözme Ayarları</string> <!-- 인코딩/디코딩 설정 -->
+    <string name="setting_setup_endecode">Kodlama/Çözme Yöntemi Seç</string> <!-- 인코딩/디코딩 방식 선택 -->
+    <string name="setting_copy">Sonuçları otomatik olarak kopyala</string> <!-- 결과 자동 복사 -->
+    <string name="setting_interface">Arayüz Ayarları</string> <!-- 인터페이스 설정 -->
+    <string name="setting_theme">Tema Ayarları</string> <!-- 테마 설정 -->
+    <string name="setting_Language">Dil Ayarları</string> <!-- 언어 설정 -->
+    <string name="setting_Guide">Kullanıcı Kılavuzu</string> <!-- 사용자 가이드 -->
+    <string name="setting_feedback">Hata Bildirimi ve Geri Bildirim</string> <!-- 버그 신고 및 피드백 -->
+
+    <!-- Dosya sayfası -->
+    <string name="file_name">Dosya adı burada görüntülenecek.</string> <!-- 파일 이름이 여기에 표시됩니다. -->
+
+    <!-- Ana sayfa -->
+    <string name="edit_textView">Lütfen metni girin.</string> <!-- 텍스트를 입력하시오. -->
+    <string name="output_textView">Sonuç burada görüntülenecek.</string> <!-- 결과가 출력됩니다. -->
+
+    <!-- Genel düğmeler -->
+    <string name="encode_btn">Kodla</string> <!-- 인코딩 -->
+    <string name="decode_btn">Çöz</string> <!-- 디코딩 -->
+
+    <!-- Bildirimler -->
+    <string name="toast_no_copy_content">Kopyalanacak içerik yok.</string> <!-- 복사할 내용이 없습니다. -->
+    <string name="toast_no_content">İçerik yok.</string> <!-- 내용이 없습니다. -->
+    <string name="toast_copied">İçerik kopyalandı.</string> <!-- 내용이 복사되었습니다. -->
+    <string name="toast_camera_permission_needed">Kamera izni gerekli.</string> <!-- 카메라 권한이 필요합니다. -->
+    <string name="toast_write_permission_needed">Dosya kaydetme izni gerekli.</string> <!-- 파일 저장 권한이 필요합니다. -->
+    <string name="toast_no_file_name">Dosya adı bulunamadı.</string> <!-- 파일 이름을 찾을 수 없습니다. -->
+    <string name="toast_select_file">Lütfen bir dosya seçin.</string> <!-- 파일을 선택하세요. -->
+    <string name="toast_no_file_app">Dosya seçmek için uygulama yok.</string> <!-- 파일을 선택할 수 있는 앱이 없습니다. -->
+    <string name="toast_file_saved">Dosya indirildi: %1$s</string> <!-- 파일이 다운로드되었습니다: %1$s -->
+    <string name="toast_file_save_error">Dosya kaydedilirken hata oluştu.</string> <!-- 파일 저장 중 오류가 발생했습니다. -->
+    <string name="toast_file_encode_saved">Dosya kodlandı ve kaydedildi: %1$s</string> <!-- 파일이 인코딩되어 저장되었습니다: %1$s -->
+    <string name="toast_file_decode_saved">Dosya çözüldü ve kaydedildi: %1$s</string> <!-- 파일이 디코딩되어 저장되었습니다: %1$s -->
+    <string name="toast_file_read_error">Dosya okunurken hata oluştu.</string> <!-- 파일을 읽는 중 오류가 발생했습니다. -->
+    <string name="toast_text_copied">Metin kopyalandı: %1$s</string> <!-- 텍스트가 복사되었습니다: %1$s -->
+
+    <!-- Menü -->
+    <string name="menu_home">Ana Sayfa</string> <!-- 홈 -->
+    <string name="menu_file">Dosya</string> <!-- 파일 -->
+    <string name="menu_setting">Ayarlar</string> <!-- 설정 -->
+
+</resources>

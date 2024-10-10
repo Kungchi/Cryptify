@@ -9,6 +9,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import com.ksh.cryptify.R
+import com.ksh.cryptify.Utility.Language
 import com.ksh.cryptify.databinding.FragmentSettingPageBinding
 import java.util.Locale
 
@@ -17,6 +18,7 @@ class SettingPageFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var sharedPreferences: android.content.SharedPreferences
+    private lateinit var languageManager: Language
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +27,8 @@ class SettingPageFragment : Fragment() {
         _binding = FragmentSettingPageBinding.inflate(inflater, container, false)
 
         sharedPreferences = requireContext().getSharedPreferences("settings", Context.MODE_PRIVATE)
+
+        languageManager = Language(requireContext())
 
         setup_EncodeDecode()
 
@@ -53,7 +57,6 @@ class SettingPageFragment : Fragment() {
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                // 아무것도 선택되지 않았을 때의 처리
             }
         }
     }
@@ -72,9 +75,23 @@ class SettingPageFragment : Fragment() {
         val languagePosition = when (savedLanguage) {
             "ko" -> 0 // 한국어
             "en" -> 1 // 영어
-            else -> 0 // 기본값은 한국어
+            "ja" -> 2 // 일본어
+            "zh" -> 3 // 중국어
+            "hi" -> 4 // 힌디어
+            "ur" -> 5 // 우르두어
+            "es" -> 6 // 스페인어
+            "ar" -> 7 // 아랍어
+            "pt" -> 8 // 포르투갈어
+            "bn" -> 9 // 벵골어
+            "ru" -> 10 // 러시아어
+            "de" -> 11 // 독일어
+            "fr" -> 12 // 프랑스어
+            "tr" -> 13 // 터키어
+            "it" -> 14 // 이탈리아어
+            else -> 1 // 기본값은 영어
         }
         binding.languageSpinner.setSelection(languagePosition)
+        languageManager.applyLocale(savedLanguage!!)
 
         // Spinner에서 항목 선택 시 언어 변경 처리
         binding.languageSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -82,18 +99,30 @@ class SettingPageFragment : Fragment() {
                 val selectedLanguageCode = when (position) {
                     0 -> "ko"  // 한국어
                     1 -> "en"  // 영어
-                    else -> "ko"  // 기본값 한국어
-                }
+                    2 -> "ja"  // 일본어
+                    3 -> "zh"  // 중국어
+                    4 -> "hi"  // 힌디어
+                    5 -> "ur"  // 우르두어
+                    6 -> "es"  // 스페인어
+                    7 -> "ar"  // 아랍어
+                    8 -> "pt"  // 포르투갈어
+                    9 -> "bn"  // 벵골어
+                    10 -> "ru"  // 러시아어
+                    11 -> "de"  // 독일어
+                    12 -> "fr"  // 프랑스어
+                    13 -> "tr"  // 터키어
+                    14 -> "it"  // 이탈리아어
+                    else -> "en"  // 기본값 영어
 
-                // 현재 언어가 선택된 언어와 다를 경우만 처리
-                if (sharedPreferences.getString("language", "ko") != selectedLanguageCode) {
-                    // 선택한 언어를 SharedPreferences에 저장
+                }
+                // 언어 변경 적용
+                if (savedLanguage != selectedLanguageCode) {
+                    languageManager.setLanguage(selectedLanguageCode)
+
+                    // SharedPreferences에 새로운 언어 설정 저장
                     sharedPreferences.edit().putString("language", selectedLanguageCode).apply()
 
-                    // 언어 변경 적용
-                    setLocale(requireContext(), selectedLanguageCode)
-
-                    // 액티비티 재시작으로 변경 사항 반영
+                    // 언어 변경 적용 후 액티비티 재시작
                     requireActivity().recreate()
                 }
             }
@@ -101,16 +130,6 @@ class SettingPageFragment : Fragment() {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
     }
-
-    private fun setLocale(context: Context, languageCode: String) {
-        val locale = Locale(languageCode)
-        Locale.setDefault(locale)
-        val resources = context.resources
-        val config = resources.configuration
-        config.setLocale(locale)
-        resources.updateConfiguration(config, resources.displayMetrics)
-    }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

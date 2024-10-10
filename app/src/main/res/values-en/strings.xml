@@ -18,10 +18,21 @@
 
     <!-- Language setting -->
     <string-array name="language_options">
-        <item>Korean(한국어)</item>
-        <item>English</item>
-        <item>Japanese(日本語)</item>
-        <item>Chinese(中文)</item>
+        <item>Korean(한국어)</item>  <!-- 한국어 -->
+        <item>English</item>  <!-- 영어 -->
+        <item>Japanese(日本語)</item>  <!-- 일본어 -->
+        <item>Chinese(中文)</item>  <!-- 중국어 -->
+        <item>Hindi(हिन्दी)</item>  <!-- 힌디어 -->
+        <item>Urdu(اردو)</item>  <!-- 우르두어 -->
+        <item>Spanish(Español)</item>  <!-- 스페인어 -->
+        <item>Arabic(العربية)</item>  <!-- 아랍어 -->
+        <item>Portuguese(Português)</item>  <!-- 포르투갈어 -->
+        <item>Bengali(বাংলা)</item>  <!-- 벵골어 -->
+        <item>Russian(Русский)</item>  <!-- 러시아어 -->
+        <item>German(Deutsch)</item>  <!-- 독일어 -->
+        <item>French(Français)</item>  <!-- 프랑스어 -->
+        <item>Turkish(Türkçe)</item>  <!-- 터키어 -->
+        <item>Italian(Italiano)</item>  <!-- 이탈리아어 -->
     </string-array>
 
     <!-- Setting Page -->
@@ -51,4 +62,19 @@
     <string name="toast_copied">Content copied.</string>
     <string name="toast_camera_permission_needed">Camera permission is required.</string>
     <string name="toast_write_permission_needed">Write permission is required.</string>
+    <string name="toast_no_file_name">File name not found.</string>
+    <string name="toast_select_file">Please select a file.</string>
+    <string name="toast_no_file_app">No app available to select a file.</string>
+    <string name="toast_file_saved">File has been downloaded: %1$s</string>
+    <string name="toast_file_save_error">An error occurred while saving the file.</string>
+    <string name="toast_file_encode_saved">File has been encoded and saved: %1$s</string>
+    <string name="toast_file_decode_saved">File has been decoded and saved: %1$s</string>
+    <string name="toast_file_read_error">An error occurred while reading the file.</string>
+    <string name="toast_text_copied">Text has been copied: %1$s</string>
+
+    <!-- menu -->
+    <string name="menu_home">Home</string>
+    <string name="menu_file">File</string>
+    <string name="menu_setting">Settings</string>
+
 </resources>

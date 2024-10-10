@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Выбор метода кодирования/декодирования -->
+    <string-array name="encoding_methods">
+        <item>Base64</item>
+        <item>URL-кодирование</item>
+        <item>Шестнадцатеричный</item> <!-- 16진수 -->
+        <item>ASCII</item>
+        <item>UTF-8</item>
+    </string-array>
+
+    <!-- Параметры темы -->
+    <string-array name="theme_options">
+        <item>Светлый режим</item> <!-- 라이트 모드 -->
+        <item>Тёмный режим</item> <!-- 다크 모드 -->
+        <item>Системный по умолчанию</item> <!-- 시스템 기본값 -->
+    </string-array>
+
+    <!-- Настройки языка -->
+    <string-array name="language_options">
+        <item>Корейский(한국어)</item>  <!-- 한국어 -->
+        <item>Английский(English)</item>  <!-- 영어 -->
+        <item>Японский(日本語)</item>  <!-- 일본어 -->
+        <item>Китайский(中文)</item>  <!-- 중국어 -->
+        <item>Хинди(हिन्दी)</item>  <!-- 힌디어 -->
+        <item>Урду(اردو)</item>  <!-- 우르두어 -->
+        <item>Испанский(Español)</item>  <!-- 스페인어 -->
+        <item>Арабский(العربية)</item>  <!-- 아랍어 -->
+        <item>Португальский(Português)</item>  <!-- 포르투갈어 -->
+        <item>Бенгальский(বাংলা)</item>  <!-- 벵골어 -->
+        <item>Русский</item>  <!-- 러시아어 -->
+        <item>Немецкий(Deutsch)</item>  <!-- 독일어 -->
+        <item>Французский(Français)</item>  <!-- 프랑스어 -->
+        <item>Турецкий(Türkçe)</item>  <!-- 터키어 -->
+        <item>Итальянский(Italiano)</item>  <!-- 이탈리아어 -->
+    </string-array>
+
+    <!-- Страница настроек -->
+    <string name="setting_endecode">Настройки кодирования/декодирования</string> <!-- 인코딩/디코딩 설정 -->
+    <string name="setting_setup_endecode">Выбор метода кодирования/декодирования</string> <!-- 인코딩/디코딩 방식 선택 -->
+    <string name="setting_copy">Автоматически копировать результат</string> <!-- 결과 자동 복사 -->
+    <string name="setting_interface">Настройки интерфейса</string> <!-- 인터페이스 설정 -->
+    <string name="setting_theme">Настройки темы</string> <!-- 테마 설정 -->
+    <string name="setting_Language">Настройки языка</string> <!-- 언어 설정 -->
+    <string name="setting_Guide">Руководство пользователя</string> <!-- 사용자 가이드 -->
+    <string name="setting_feedback">Сообщить об ошибках и отзывы</string> <!-- 버그 신고 및 피드백 -->
+
+    <!-- Страница файла -->
+    <string name="file_name">Имя файла будет отображаться здесь.</string> <!-- 파일 이름이 여기에 표시됩니다. -->
+
+    <!-- Главная страница -->
+    <string name="edit_textView">Введите текст.</string> <!-- 텍스트를 입력하시오. -->
+    <string name="output_textView">Результат будет отображен здесь.</string> <!-- 결과가 출력됩니다. -->
+
+    <!-- Общие кнопки -->
+    <string name="encode_btn">Кодировать</string> <!-- 인코딩 -->
+    <string name="decode_btn">Декодировать</string> <!-- 디코딩 -->
+
+    <!-- Уведомления -->
+    <string name="toast_no_copy_content">Нет содержимого для копирования.</string> <!-- 복사할 내용이 없습니다. -->
+    <string name="toast_no_content">Нет содержимого.</string> <!-- 내용이 없습니다. -->
+    <string name="toast_copied">Содержимое скопировано.</string> <!-- 내용이 복사되었습니다. -->
+    <string name="toast_camera_permission_needed">Необходимо разрешение на камеру.</string> <!-- 카메라 권한이 필요합니다. -->
+    <string name="toast_write_permission_needed">Необходимо разрешение на сохранение файлов.</string> <!-- 파일 저장 권한이 필요합니다. -->
+    <string name="toast_no_file_name">Имя файла не найдено.</string> <!-- 파일 이름을 찾을 수 없습니다. -->
+    <string name="toast_select_file">Пожалуйста, выберите файл.</string> <!-- 파일을 선택하세요. -->
+    <string name="toast_no_file_app">Нет приложений для выбора файла.</string> <!-- 파일을 선택할 수 있는 앱이 없습니다. -->
+    <string name="toast_file_saved">Файл загружен: %1$s</string> <!-- 파일이 다운로드되었습니다: %1$s -->
+    <string name="toast_file_save_error">Ошибка при сохранении файла.</string> <!-- 파일 저장 중 오류가 발생했습니다. -->
+    <string name="toast_file_encode_saved">Файл закодирован и сохранён: %1$s</string> <!-- 파일이 인코딩되어 저장되었습니다: %1$s -->
+    <string name="toast_file_decode_saved">Файл декодирован и сохранён: %1$s</string> <!-- 파일이 디코딩되어 저장되었습니다: %1$s -->
+    <string name="toast_file_read_error">Ошибка при чтении файла.</string> <!-- 파일을 읽는 중 오류가 발생했습니다. -->
+    <string name="toast_text_copied">Текст скопирован: %1$s</string> <!-- 텍스트가 복사되었습니다: %1$s -->
+
+    <!-- Меню -->
+    <string name="menu_home">Главная</string> <!-- 홈 -->
+    <string name="menu_file">Файл</string> <!-- 파일 -->
+    <string name="menu_setting">Настройки</string> <!-- 설정 -->
+
+</resources>

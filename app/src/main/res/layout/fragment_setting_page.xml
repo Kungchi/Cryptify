@@ -19,7 +19,9 @@
             android:text="@string/setting_endecode"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:paddingBottom="8dp" />
+            android:paddingBottom="8dp"
+            android:textDirection="locale"
+            android:gravity="start"/>
 
         <View
             android:layout_width="match_parent"
@@ -38,33 +40,45 @@
                 android:layout_height="wrap_content"
                 android:text="@string/setting_setup_endecode"
                 android:textStyle="bold"
-                android:paddingTop="8dp" />
+                android:paddingTop="8dp"
+                android:textDirection="locale"
+                android:gravity="start"/>
 
             <Spinner
                 android:id="@+id/encoding_method_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/encoding_methods"
-                android:spinnerMode="dropdown" />
+                android:spinnerMode="dropdown"
+                android:paddingTop="8dp"
+                android:textDirection="locale" />
 
             <!-- 자동 복사 기능 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:baselineAligned="false"
                 android:gravity="center_vertical"
-                android:paddingTop="16dp">
+                android:paddingTop="8dp">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/setting_copy" />
+                    android:text="@string/setting_copy"
+                    android:layout_gravity="center_vertical"
+                    android:textDirection="locale"
+                    android:textAlignment="gravity"
+                    android:gravity="start"/>
 
                 <Switch
                     android:id="@+id/auto_copy_switch"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textDirection="locale"
+                    android:textAlignment="gravity"
+                    android:gravity="start"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -80,7 +94,10 @@
             android:text="@string/setting_interface"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:paddingBottom="8dp" />
+            android:paddingBottom="8dp"
+            android:textDirection="locale"
+            android:textAlignment="gravity"
+            android:gravity="start"/>
 
         <View
             android:layout_width="match_parent"
@@ -98,7 +115,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/setting_theme"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textDirection="locale"
+                android:textAlignment="gravity"
+                android:gravity="start"/>
 
             <Spinner
                 android:id="@+id/theme_spinner"
@@ -106,7 +126,8 @@
                 android:layout_height="wrap_content"
                 android:entries="@array/theme_options"
                 android:spinnerMode="dropdown"
-                android:paddingTop="8dp" />
+                android:paddingTop="8dp"
+                android:textDirection="locale"/>
 
             <!-- 언어 설정 -->
             <TextView
@@ -114,7 +135,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/setting_Language"
                 android:textStyle="bold"
-                android:paddingTop="16dp" />
+                android:paddingTop="16dp"
+                android:textDirection="locale"
+                android:textAlignment="gravity"
+                android:gravity="start"/>
 
             <Spinner
                 android:id="@+id/language_spinner"
@@ -122,7 +146,8 @@
                 android:layout_height="wrap_content"
                 android:entries="@array/language_options"
                 android:spinnerMode="dropdown"
-                android:paddingTop="8dp" />
+                android:paddingTop="8dp"
+                android:textDirection="locale" />
         </LinearLayout>
 
         <!-- 구분선 -->

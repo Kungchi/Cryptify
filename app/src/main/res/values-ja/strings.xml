@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- インコード/デコード方式の選択 -->
+    <string-array name="encoding_methods">
+        <item>Base64</item>
+        <item>URLエンコード</item>
+        <item>16進数</item>
+        <item>ASCII</item>
+        <item>UTF-8</item>
+    </string-array>
+
+    <!-- テーマオプション -->
+    <string-array name="theme_options">
+        <item>ライトモード</item>
+        <item>ダークモード</item>
+        <item>システムデフォルト</item>
+    </string-array>
+
+    <!-- 言語設定 -->
+    <string-array name="language_options">
+        <item>韓国語(한국어)</item>  <!-- 한국어 -->
+        <item>英語(English)</item>  <!-- 영어 -->
+        <item>日本語</item>  <!-- 일본어 -->
+        <item>中国語(中文)</item>  <!-- 중국어 -->
+        <item>ヒンディー語(हिन्दी)</item>  <!-- 힌디어 -->
+        <item>ウルドゥー語(اردو)</item>  <!-- 우르두어 -->
+        <item>スペイン語(Español)</item>  <!-- 스페인어 -->
+        <item>アラビア語(العربية)</item>  <!-- 아랍어 -->
+        <item>ポルトガル語(Português)</item>  <!-- 포르투갈어 -->
+        <item>ベンガル語(বাংলা)</item>  <!-- 벵골어 -->
+        <item>ロシア語(Русский)</item>  <!-- 러시아어 -->
+        <item>ドイツ語(Deutsch)</item>  <!-- 독일어 -->
+        <item>フランス語(Français)</item>  <!-- 프랑스어 -->
+        <item>トルコ語(Türkçe)</item>  <!-- 터키어 -->
+        <item>イタリア語(Italiano)</item>  <!-- 이탈리아어 -->
+    </string-array>
+
+    <!-- 設定ページ -->
+    <string name="setting_endecode">エンコード/デコード設定</string>
+    <string name="setting_setup_endecode">エンコード/デコード方式の選択</string>
+    <string name="setting_copy">結果を自動コピー</string>
+    <string name="setting_interface">インターフェース設定</string>
+    <string name="setting_theme">テーマ設定</string>
+    <string name="setting_Language">言語設定</string>
+    <string name="setting_Guide">ユーザーガイド</string>
+    <string name="setting_feedback">バグ報告とフィードバック</string>
+
+    <!-- ファイルページ -->
+    <string name="file_name">ファイル名がここに表示されます。</string>
+
+    <!-- メインページ -->
+    <string name="edit_textView">テキストを入力してください。</string>
+    <string name="output_textView">結果が表示されます。</string>
+
+    <!-- 共通ボタン -->
+    <string name="encode_btn">エンコード</string>
+    <string name="decode_btn">デコード</string>
+
+    <!-- トースト -->
+    <string name="toast_no_copy_content">コピーする内容がありません。</string>
+    <string name="toast_no_content">内容がありません。</string>
+    <string name="toast_copied">内容がコピーされました。</string>
+    <string name="toast_camera_permission_needed">カメラの権限が必要です。</string>
+    <string name="toast_write_permission_needed">ファイル保存の権限が必要です。</string>
+    <string name="toast_no_file_name">ファイル名が見つかりません。</string>
+    <string name="toast_select_file">ファイルを選択してください。</string>
+    <string name="toast_no_file_app">ファイルを選択できるアプリがありません。</string>
+    <string name="toast_file_saved">ファイルがダウンロードされました: %1$s</string>
+    <string name="toast_file_save_error">ファイル保存中にエラーが発生しました。</string>
+    <string name="toast_file_encode_saved">ファイルがエンコードされて保存されました: %1$s</string>
+    <string name="toast_file_decode_saved">ファイルがデコードされて保存されました: %1$s</string>
+    <string name="toast_file_read_error">ファイル読み込み中にエラーが発生しました。</string>
+    <string name="toast_text_copied">テキストがコピーされました: %1$s</string>
+
+    <!-- メニュー -->
+    <string name="menu_home">ホーム</string>
+    <string name="menu_file">ファイル</string>
+    <string name="menu_setting">設定</string>
+
+</resources>

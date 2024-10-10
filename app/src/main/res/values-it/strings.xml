@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Selezione del metodo di codifica/decodifica -->
+    <string-array name="encoding_methods">
+        <item>Base64</item>
+        <item>Codifica URL</item>
+        <item>Esadecimale</item> <!-- 16진수 -->
+        <item>ASCII</item>
+        <item>UTF-8</item>
+    </string-array>
+
+    <!-- Opzioni tema -->
+    <string-array name="theme_options">
+        <item>Modalità Chiara</item> <!-- 라이트 모드 -->
+        <item>Modalità Scura</item> <!-- 다크 모드 -->
+        <item>Predefinito di Sistema</item> <!-- 시스템 기본값 -->
+    </string-array>
+
+    <!-- Impostazioni lingua -->
+    <string-array name="language_options">
+        <item>Coreano(한국어)</item>  <!-- 한국어 -->
+        <item>Inglese(English)</item>  <!-- 영어 -->
+        <item>Giapponese(日本語)</item>  <!-- 일본어 -->
+        <item>Cinese(中文)</item>  <!-- 중국어 -->
+        <item>Hindi(हिन्दी)</item>  <!-- 힌디어 -->
+        <item>Urdu(اردو)</item>  <!-- 우르두어 -->
+        <item>Spagnolo(Español)</item>  <!-- 스페인어 -->
+        <item>Arabo(العربية)</item>  <!-- 아랍어 -->
+        <item>Portoghese(Português)</item>  <!-- 포르투갈어 -->
+        <item>Bengalese(বাংলা)</item>  <!-- 벵골어 -->
+        <item>Russo(Русский)</item>  <!-- 러시아어 -->
+        <item>Tedesco(Deutsch)</item>  <!-- 독일어 -->
+        <item>Francese(Français)</item>  <!-- 프랑스어 -->
+        <item>Turco(Türkçe)</item>  <!-- 터키어 -->
+        <item>Italiano</item>  <!-- 이탈리아어 -->
+    </string-array>
+
+    <!-- Pagina delle impostazioni -->
+    <string name="setting_endecode">Impostazioni di codifica/decodifica</string> <!-- 인코딩/디코딩 설정 -->
+    <string name="setting_setup_endecode">Seleziona il metodo di codifica/decodifica</string> <!-- 인코딩/디코딩 방식 선택 -->
+    <string name="setting_copy">Copia automaticamente il risultato</string> <!-- 결과 자동 복사 -->
+    <string name="setting_interface">Impostazioni dell\'interfaccia</string> <!-- 인터페이스 설정 -->
+    <string name="setting_theme">Impostazioni del tema</string> <!-- 테마 설정 -->
+    <string name="setting_Language">Impostazioni della lingua</string> <!-- 언어 설정 -->
+    <string name="setting_Guide">Guida utente</string> <!-- 사용자 가이드 -->
+    <string name="setting_feedback">Segnala bug e feedback</string> <!-- 버그 신고 및 피드백 -->
+
+    <!-- Pagina del file -->
+    <string name="file_name">Il nome del file verrà visualizzato qui.</string> <!-- 파일 이름이 여기에 표시됩니다. -->
+
+    <!-- Pagina principale -->
+    <string name="edit_textView">Inserisci il testo.</string> <!-- 텍스트를 입력하시오. -->
+    <string name="output_textView">Il risultato verrà visualizzato qui.</string> <!-- 결과가 출력됩니다. -->
+
+    <!-- Pulsanti comuni -->
+    <string name="encode_btn">Codifica</string> <!-- 인코딩 -->
+    <string name="decode_btn">Decodifica</string> <!-- 디코딩 -->
+
+    <!-- Notifiche -->
+    <string name="toast_no_copy_content">Nessun contenuto da copiare.</string> <!-- 복사할 내용이 없습니다. -->
+    <string name="toast_no_content">Nessun contenuto.</string> <!-- 내용이 없습니다. -->
+    <string name="toast_copied">Contenuto copiato.</string> <!-- 내용이 복사되었습니다. -->
+    <string name="toast_camera_permission_needed">È necessario il permesso per la fotocamera.</string> <!-- 카메라 권한이 필요합니다. -->
+    <string name="toast_write_permission_needed">È necessario il permesso di salvataggio dei file.</string> <!-- 파일 저장 권한이 필요합니다. -->
+    <string name="toast_no_file_name">Nome del file non trovato.</string> <!-- 파일 이름을 찾을 수 없습니다. -->
+    <string name="toast_select_file">Seleziona un file.</string> <!-- 파일을 선택하세요. -->
+    <string name="toast_no_file_app">Nessuna app disponibile per selezionare i file.</string> <!-- 파일을 선택할 수 있는 앱이 없습니다. -->
+    <string name="toast_file_saved">File scaricato: %1$s</string> <!-- 파일이 다운로드되었습니다: %1$s -->
+    <string name="toast_file_save_error">Errore durante il salvataggio del file.</string> <!-- 파일 저장 중 오류가 발생했습니다. -->
+    <string name="toast_file_encode_saved">File codificato e salvato: %1$s</string> <!-- 파일이 인코딩되어 저장되었습니다: %1$s -->
+    <string name="toast_file_decode_saved">File decodificato e salvato: %1$s</string> <!-- 파일이 디코딩되어 저장되었습니다: %1$s -->
+    <string name="toast_file_read_error">Errore durante la lettura del file.</string> <!-- 파일을 읽는 중 오류가 발생했습니다. -->
+    <string name="toast_text_copied">Testo copiato: %1$s</string> <!-- 텍스트가 복사되었습니다: %1$s -->
+
+    <!-- Menu -->
+    <string name="menu_home">Home</string> <!-- 홈 -->
+    <string name="menu_file">File</string> <!-- 파일 -->
+    <string name="menu_setting">Impostazioni</string> <!-- 설정 -->
+
+</resources>
