@@ -14,6 +14,11 @@
         <item>16진수</item>
         <item>ASCII</item>
         <item>UTF-8</item>
+        <!-- Additional encoding methods -->
+        <item>Binary</item>
+        <item>ROT13</item>
+        <item>Quoted-Printable</item>
+        <item>Punycode</item>
     </string-array>
 
     <!-- 테마 옵션 -->

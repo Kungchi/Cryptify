@@ -57,4 +57,12 @@ dependencies {
     implementation("com.google.mlkit:text-recognition-chinese:16.0.1")
     implementation("com.google.mlkit:text-recognition-devanagari:16.0.1")
     implementation("com.google.mlkit:text-recognition-japanese:16.0.1")
+    // Base64, URL, Hex 처리용 Apache Commons Codec
+    implementation("commons-codec:commons-codec:1.15")
+
+// Kotlinx Serialization for advanced serialization tasks (if needed)
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
+    implementation("commons-codec:commons-codec:1.15")
+
+    testImplementation("junit:junit:4.13.2")
 }

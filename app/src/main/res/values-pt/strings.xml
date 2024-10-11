@@ -7,6 +7,10 @@
         <item>Hexadecimal</item> <!-- 16진수 -->
         <item>ASCII</item>
         <item>UTF-8</item>
+        <item>Binário</item> <!-- Binary -->
+        <item>ROT13</item>
+        <item>Quoted-Printable</item>
+        <item>Punycode</item>
     </string-array>
 
     <!-- Opções de tema -->

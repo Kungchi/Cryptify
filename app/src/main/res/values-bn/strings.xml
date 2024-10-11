@@ -7,6 +7,10 @@
         <item>হেক্সাডেসিম্যাল</item> <!-- 16진수 -->
         <item>ASCII</item>
         <item>UTF-8</item>
+        <item>বাইনারি</item> <!-- Binary -->
+        <item>ROT13</item>
+        <item>Quoted-Printable</item>
+        <item>Punycode</item>
     </string-array>
 
     <!-- থিমের বিকল্প -->
