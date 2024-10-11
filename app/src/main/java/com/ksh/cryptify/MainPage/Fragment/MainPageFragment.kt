@@ -32,6 +32,7 @@ class MainPageFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var cameraHandler: CameraHandler
     private lateinit var endecode: Endecode
+    private lateinit var sharedPreferences: android.content.SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,24 +41,31 @@ class MainPageFragment : Fragment() {
         _binding = FragmentMainPageBinding.inflate(inflater, container, false)
         cameraHandler = CameraHandler()
         endecode = Endecode()
+        sharedPreferences = requireContext().getSharedPreferences("settings", Context.MODE_PRIVATE)
 
         buttonGroup()
         return binding.root
     }
-
     private fun buttonGroup() {
         binding.encodeBtn.setOnClickListener {
             binding.textView.text = ""
             val inputText = binding.editText.text.toString()
             val encodeData = endecode.processText(requireContext(), inputText, true)
-            Log.d("확인용", encodeData)
             binding.textView.text = encodeData
+            val savedCopy = sharedPreferences.getBoolean("auto_copy", false)
+            if(savedCopy) {
+                copy(encodeData)
+            }
         }
         binding.decodeBtn.setOnClickListener {
             binding.textView.text = ""
             val inputText = binding.editText.text.toString()
             val decodeData = endecode.processText(requireContext(), inputText, false)
             binding.textView.text = decodeData
+            val savedCopy = sharedPreferences.getBoolean("auto_copy", false)
+            if(savedCopy) {
+                copy(decodeData)
+            }
         }
         binding.clearBtn.setOnClickListener {
             binding.editText.text.clear()
@@ -67,25 +75,11 @@ class MainPageFragment : Fragment() {
         }
         binding.copyBtn.setOnClickListener {
             val text = binding.editText.text.toString()
-            if(text.isEmpty()) {
-                CustomToast.show(requireContext(),getString(R.string.toast_no_copy_content))
-            } else {
-                val clipboard = requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                val clip = ClipData.newPlainText("Copied Text", text)
-                clipboard.setPrimaryClip(clip)
-                CustomToast.show(requireContext(),getString(R.string.toast_copied))
-            }
+            copy(text)
         }
         binding.copyBtn2.setOnClickListener {
             val text = binding.textView.text.toString()
-            if(text.isEmpty()) {
-                CustomToast.show(requireContext(),getString(R.string.toast_no_copy_content))
-            } else {
-                val clipboard = requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                val clip = ClipData.newPlainText("Copied Text", text)
-                clipboard.setPrimaryClip(clip)
-                CustomToast.show(requireContext(),getString(R.string.toast_copied))
-            }
+            copy(text)
         }
         binding.downloadBtn.setOnClickListener {
             if(checkWritePer()) {
@@ -110,6 +104,17 @@ class MainPageFragment : Fragment() {
                     101
                 )
             }
+        }
+    }
+
+    private fun copy(text : String) {
+        if(text.isEmpty()) {
+            CustomToast.show(requireContext(),getString(R.string.toast_no_copy_content))
+        } else {
+            val clipboard = requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            val clip = ClipData.newPlainText("Copied Text", text)
+            clipboard.setPrimaryClip(clip)
+            CustomToast.show(requireContext(),getString(R.string.toast_copied))
         }
     }
 

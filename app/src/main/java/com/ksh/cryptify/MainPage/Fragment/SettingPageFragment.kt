@@ -37,6 +37,8 @@ class SettingPageFragment : Fragment() {
 
         setup_theme()
 
+        switch_checked()
+
         return binding.root
     }
 
@@ -158,6 +160,17 @@ class SettingPageFragment : Fragment() {
                 if(themeMode != savedTheme) { AppCompatDelegate.setDefaultNightMode(themeMode) }
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+        }
+    }
+
+    private fun switch_checked() {
+        binding.autoCopySwitch.isChecked = sharedPreferences.getBoolean("auto_copy", false)
+        binding.autoCopySwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+            if(isChecked) {
+                sharedPreferences.edit().putBoolean("auto_copy", isChecked).apply()
+            } else {
+                sharedPreferences.edit().putBoolean("auto_copy", isChecked).apply()
             }
         }
     }
