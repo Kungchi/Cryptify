@@ -46,7 +46,8 @@
                 android:layout_height="wrap_content"
                 android:entries="@array/encoding_methods"
                 android:spinnerMode="dropdown"
-                android:textAlignment="viewStart"/>
+                android:textAlignment="viewStart"
+                style="@style/CustomSpinnerStyle"/>
 
             <!-- 자동 복사 기능 -->
             <LinearLayout
@@ -111,7 +112,8 @@
                 android:entries="@array/theme_options"
                 android:spinnerMode="dropdown"
                 android:paddingTop="8dp"
-                android:textAlignment="viewStart"/>
+                android:textAlignment="viewStart"
+                style="@style/CustomSpinnerStyle"/>
 
             <!-- 언어 설정 -->
             <TextView
@@ -128,7 +130,8 @@
                 android:entries="@array/language_options"
                 android:spinnerMode="dropdown"
                 android:paddingTop="8dp"
-                android:textAlignment="viewStart"/>
+                android:textAlignment="viewStart"
+                style="@style/CustomSpinnerStyle"/>
         </LinearLayout>
 
         <!-- 구분선 -->
