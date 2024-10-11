@@ -79,6 +79,7 @@
     <!-- Меню -->
     <string name="menu_home">Главная</string> <!-- 홈 -->
     <string name="menu_file">Файл</string> <!-- 파일 -->
-    <string name="menu_setting">Настройки</string> <!-- 설정 -->
+    <string name="menu_setting">Настройки</string>
+    <string name="toast_error">Этот текст не может быть закодирован/декодирован.</string> <!-- 설정 -->
 
 </resources>

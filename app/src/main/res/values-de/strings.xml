@@ -79,6 +79,7 @@
     <!-- Menü -->
     <string name="menu_home">Startseite</string> <!-- 홈 -->
     <string name="menu_file">Datei</string> <!-- 파일 -->
-    <string name="menu_setting">Einstellungen</string> <!-- 설정 -->
+    <string name="menu_setting">Einstellungen</string>
+    <string name="toast_error">Dieser Text kann nicht codiert/decodiert werden.</string> <!-- 설정 -->
 
 </resources>

@@ -79,6 +79,7 @@
     <!-- مینو -->
     <string name="menu_home">ہوم</string> <!-- 홈 -->
     <string name="menu_file">فائل</string> <!-- 파일 -->
-    <string name="menu_setting">سیٹنگ</string> <!-- 설정 -->
+    <string name="menu_setting">سیٹنگ</string>
+    <string name="toast_error">اس متن کو انکوڈ/ڈیکوڈ نہیں کیا جا سکتا۔</string> <!-- 설정 -->
 
 </resources>

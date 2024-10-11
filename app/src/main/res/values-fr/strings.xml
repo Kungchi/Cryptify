@@ -79,6 +79,7 @@
     <!-- Menu -->
     <string name="menu_home">Accueil</string> <!-- 홈 -->
     <string name="menu_file">Fichier</string> <!-- 파일 -->
-    <string name="menu_setting">Paramètres</string> <!-- 설정 -->
+    <string name="menu_setting">Paramètres</string>
+    <string name="toast_error">Ce texte ne peut pas être encodé/décodé.</string> <!-- 설정 -->
 
 </resources>

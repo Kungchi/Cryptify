@@ -1,20 +1,35 @@
 package com.ksh.cryptify.Utility
 
+import android.content.Context
 import android.graphics.Rect
 import android.net.Uri
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import java.io.IOException
 import androidx.fragment.app.Fragment
+import com.google.mlkit.vision.text.chinese.ChineseTextRecognizerOptions
+import com.google.mlkit.vision.text.devanagari.DevanagariTextRecognizerOptions
+import com.google.mlkit.vision.text.japanese.JapaneseTextRecognizerOptions
 import com.google.mlkit.vision.text.korean.KoreanTextRecognizerOptions
+import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 
 class MLkit {
 
     fun processImage(fragment: Fragment, uri: Uri, callback: (List<String>, List<Rect>) -> Unit) {
+
+        val sharedPreferences = fragment.requireContext().getSharedPreferences("settings", Context.MODE_PRIVATE)
+        var savedLanguage = sharedPreferences.getString("language", null)
+
         try {
             val image = InputImage.fromFilePath(fragment.requireContext(), uri)
-            val recognizer = TextRecognition.getClient(KoreanTextRecognizerOptions.Builder().build())
-
+            val recognizer = when(savedLanguage) {
+                "en" -> TextRecognition.getClient(TextRecognizerOptions.Builder().build()) // 영어 MLKIT
+                "zh" -> TextRecognition.getClient(ChineseTextRecognizerOptions.Builder().build()) // 중국어 MLKIT
+                "hi" -> TextRecognition.getClient(DevanagariTextRecognizerOptions.Builder().build()) // 힌디어 MLKIT
+                "ja" -> TextRecognition.getClient(JapaneseTextRecognizerOptions.Builder().build()) // 일본어 MLKIT
+                "ko" -> TextRecognition.getClient(KoreanTextRecognizerOptions.Builder().build()) // 한국어 MLKIT
+                else -> TextRecognition.getClient(TextRecognizerOptions.Builder().build()) // 기본값: 영어 MLKIT
+            }
             recognizer.process(image)
                 .addOnSuccessListener { visionText ->
                     val texts = mutableListOf<String>()

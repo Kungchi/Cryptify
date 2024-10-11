@@ -1,6 +1,7 @@
 package com.ksh.cryptify.Utility
 
 import android.content.Context
+import com.ksh.cryptify.R
 import org.apache.commons.codec.binary.Base64
 import org.apache.commons.codec.binary.Hex
 import org.apache.commons.codec.net.URLCodec
@@ -113,32 +114,37 @@ class Endecode {
         val sharedPreferences = context.getSharedPreferences("settings", Context.MODE_PRIVATE)
         val selectedMethod = sharedPreferences.getInt("encoding_method", 0)
 
-        return if (isEncoding) {
-            when (selectedMethod) {
-                0 -> encodeBase64(inputText)
-                1 -> encodeUrl(inputText)
-                2 -> encodeHex(inputText)
-                3 -> encodeAscii(inputText)
-                4 -> String(encodeUtf8(inputText))
-                5 -> encodeBinary(inputText)
-                6 -> encodeDecodeRot13(inputText)
-                7 -> encodeQuotedPrintable(inputText)
-                8 -> encodePunycode(inputText)
-                else -> inputText
+        return try {
+            if (isEncoding) {
+                when (selectedMethod) {
+                    0 -> encodeBase64(inputText)
+                    1 -> encodeUrl(inputText)
+                    2 -> encodeHex(inputText)
+                    3 -> encodeAscii(inputText)
+                    4 -> String(encodeUtf8(inputText))
+                    5 -> encodeBinary(inputText)
+                    6 -> encodeDecodeRot13(inputText)
+                    7 -> encodeQuotedPrintable(inputText)
+                    8 -> encodePunycode(inputText)
+                    else -> inputText
+                }
+            } else {
+                when (selectedMethod) {
+                    0 -> decodeBase64(inputText)
+                    1 -> decodeUrl(inputText)
+                    2 -> decodeHex(inputText)
+                    3 -> decodeAscii(inputText)
+                    4 -> decodeUtf8(inputText.toByteArray())
+                    5 -> decodeBinary(inputText)
+                    6 -> encodeDecodeRot13(inputText)
+                    7 -> decodeQuotedPrintable(inputText)
+                    8 -> decodePunycode(inputText)
+                    else -> inputText
+                }
             }
-        } else {
-            when (selectedMethod) {
-                0 -> decodeBase64(inputText)
-                1 -> decodeUrl(inputText)
-                2 -> decodeHex(inputText)
-                3 -> decodeAscii(inputText)
-                4 -> decodeUtf8(inputText.toByteArray())
-                5 -> decodeBinary(inputText)
-                6 -> encodeDecodeRot13(inputText)
-                7 -> decodeQuotedPrintable(inputText)
-                8 -> decodePunycode(inputText)
-                else -> inputText
-            }
+        } catch (e: Exception) {
+            CustomToast.show(context, context.getString(R.string.toast_no_content))
+            inputText
         }
     }
 }

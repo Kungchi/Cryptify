@@ -80,4 +80,5 @@
     <string name="menu_home">主页</string>
     <string name="menu_file">文件</string>
     <string name="menu_setting">设置</string>
+    <string name="toast_error">无法编码/解码的文本。</string>
 </resources>

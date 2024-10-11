@@ -80,5 +80,6 @@
     <string name="menu_home">ホーム</string>
     <string name="menu_file">ファイル</string>
     <string name="menu_setting">設定</string>
+    <string name="toast_error">このテキストはエンコード/デコードできません。</string>
 
 </resources>

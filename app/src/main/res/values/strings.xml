@@ -83,6 +83,7 @@
     <string name="toast_file_decode_saved">파일이 디코딩되어 저장되었습니다: %1$s</string>
     <string name="toast_file_read_error">파일을 읽는 중 오류가 발생했습니다.</string>
     <string name="toast_text_copied">텍스트가 복사되었습니다: %1$s</string>
+    <string name="toast_error">인코딩/디코딩 할수 없는 텍스트입니다.</string>
 
     <!-- menu -->
     <string name="menu_home">홈</string>

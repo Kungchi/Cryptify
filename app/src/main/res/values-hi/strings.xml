@@ -79,5 +79,6 @@
     <!-- मेनू -->
     <string name="menu_home">होम</string> <!-- 홈 -->
     <string name="menu_file">फ़ाइल</string> <!-- 파일 -->
-    <string name="menu_setting">सेटिंग</string> <!-- 설정 -->
+    <string name="menu_setting">सेटिंग</string>
+    <string name="toast_error">इस पाठ को एन्कोड/डिकोड नहीं किया जा सकता है।</string> <!-- 설정 -->
 </resources>

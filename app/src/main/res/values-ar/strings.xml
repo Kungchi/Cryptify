@@ -79,6 +79,7 @@
     <!-- القائمة -->
     <string name="menu_home">الصفحة الرئيسية</string> <!-- 홈 -->
     <string name="menu_file">ملف</string> <!-- 파일 -->
-    <string name="menu_setting">الإعدادات</string> <!-- 설정 -->
+    <string name="menu_setting">الإعدادات</string>
+    <string name="toast_error">النص غير قابل للترميز/فك الترميز.</string> <!-- 설정 -->
 
 </resources>

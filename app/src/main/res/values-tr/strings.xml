@@ -79,6 +79,7 @@
     <!-- Menü -->
     <string name="menu_home">Ana Sayfa</string> <!-- 홈 -->
     <string name="menu_file">Dosya</string> <!-- 파일 -->
-    <string name="menu_setting">Ayarlar</string> <!-- 설정 -->
+    <string name="menu_setting">Ayarlar</string>
+    <string name="toast_error">Bu metin kodlanamaz/çözülemez.</string> <!-- 설정 -->
 
 </resources>

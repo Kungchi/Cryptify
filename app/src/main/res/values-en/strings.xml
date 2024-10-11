@@ -80,5 +80,6 @@
     <string name="menu_home">Home</string>
     <string name="menu_file">File</string>
     <string name="menu_setting">Settings</string>
+    <string name="toast_error">This text cannot be encoded/decoded.</string>
 
 </resources>
