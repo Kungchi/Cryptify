@@ -9,13 +9,8 @@ import android.view.View
 import java.util.Locale
 
 class Language(private val context: Context) {
-
-    private val sharedPreferences: SharedPreferences = context.getSharedPreferences("settings", Context.MODE_PRIVATE)
-
     // 언어 설정 적용
     fun setLanguage(languageCode: String) {
-        sharedPreferences.edit().putString("language", languageCode).apply()
-
         val locale = Locale(languageCode)
         Locale.setDefault(locale)
         val config = context.resources.configuration

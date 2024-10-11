@@ -18,9 +18,9 @@
 
     <!-- 테마 옵션 -->
     <string-array name="theme_options">
+        <item>시스템 기본값</item>
         <item>라이트 모드</item>
         <item>다크 모드</item>
-        <item>시스템 기본값</item>
     </string-array>
 
     <!-- 언어 설정 -->

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.ksh.cryptify.R
 import com.ksh.cryptify.Utility.Language
@@ -33,6 +34,8 @@ class SettingPageFragment : Fragment() {
         setup_EncodeDecode()
 
         setup_Language()
+
+        setup_theme()
 
         return binding.root
     }
@@ -112,14 +115,13 @@ class SettingPageFragment : Fragment() {
                     13 -> "tr"  // 터키어
                     14 -> "it"  // 이탈리아어
                     else -> "en"  // 기본값 영어
-
                 }
                 // 언어 변경 적용
                 if (savedLanguage != selectedLanguageCode) {
-                    languageManager.setLanguage(selectedLanguageCode)
-
                     // SharedPreferences에 새로운 언어 설정 저장
                     sharedPreferences.edit().putString("language", selectedLanguageCode).apply()
+
+                    languageManager.setLanguage(selectedLanguageCode)
 
                     // 언어 변경 적용 후 액티비티 재시작
                     requireActivity().recreate()
@@ -130,7 +132,35 @@ class SettingPageFragment : Fragment() {
         }
     }
 
+    private fun setup_theme() {
+        // 인코딩/디코딩 방식 배열 가져오기
+        val themes = resources.getStringArray(R.array.theme_options)
 
+        // Spinner에 Adapter 설정
+        val themeAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, themes)
+        themeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.themeSpinner.adapter = themeAdapter
+
+        // SharedPreferences에 저장된 값을 불러와 Spinner 설정
+        val savedTheme = sharedPreferences.getInt("theme", 0)
+        binding.themeSpinner.setSelection(savedTheme)
+
+        // Spinner에서 항목 선택 시 SharedPreferences에 저장
+        binding.themeSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                sharedPreferences.edit().putInt("theme", position).apply()
+                val themeMode = when(position) {
+                    0 -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+                    1 -> AppCompatDelegate.MODE_NIGHT_NO
+                    2 -> AppCompatDelegate.MODE_NIGHT_YES
+                    else -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+                }
+                if(themeMode != savedTheme) { AppCompatDelegate.setDefaultNightMode(themeMode) }
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+        }
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
