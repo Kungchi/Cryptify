@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.ksh.cryptify.MainPage.MainPageActivity
 import com.ksh.cryptify.Utility.Language
 import java.util.Locale
@@ -44,6 +45,17 @@ class MainActivity : AppCompatActivity() {
 
         val languageManager = Language(this)
         languageManager.setLanguage(savedLanguage)
+
+        val savedTheme = sharedPreferences.getInt("theme", 0) // 기본값은 0 (시스템 테마)
+        // 저장된 테마에 맞게 모드 설정
+        val themeMode = when(savedTheme) {
+            0 -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+            1 -> AppCompatDelegate.MODE_NIGHT_NO
+            2 -> AppCompatDelegate.MODE_NIGHT_YES
+            else -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+        }
+
+        AppCompatDelegate.setDefaultNightMode(themeMode)
 
         val intent = Intent(this, MainPageActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

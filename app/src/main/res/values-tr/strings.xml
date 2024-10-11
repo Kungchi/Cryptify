@@ -15,9 +15,9 @@
 
     <!-- Tema seçenekleri -->
     <string-array name="theme_options">
+        <item>Sistem Varsayılanı</item> <!-- 시스템 기본값 -->
         <item>Açık Mod</item> <!-- 라이트 모드 -->
         <item>Karanlık Mod</item> <!-- 다크 모드 -->
-        <item>Sistem Varsayılanı</item> <!-- 시스템 기본값 -->
     </string-array>
 
     <!-- Dil ayarları -->

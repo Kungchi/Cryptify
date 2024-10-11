@@ -15,9 +15,9 @@
 
     <!-- Opzioni tema -->
     <string-array name="theme_options">
+        <item>Predefinito di Sistema</item> <!-- 시스템 기본값 -->
         <item>Modalità Chiara</item> <!-- 라이트 모드 -->
         <item>Modalità Scura</item> <!-- 다크 모드 -->
-        <item>Predefinito di Sistema</item> <!-- 시스템 기본값 -->
     </string-array>
 
     <!-- Impostazioni lingua -->

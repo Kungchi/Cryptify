@@ -15,9 +15,9 @@
 
     <!-- Themenoptionen -->
     <string-array name="theme_options">
+        <item>Systemstandard</item> <!-- 시스템 기본값 -->
         <item>Heller Modus</item> <!-- 라이트 모드 -->
         <item>Dunkler Modus</item> <!-- 다크 모드 -->
-        <item>Systemstandard</item> <!-- 시스템 기본값 -->
     </string-array>
 
     <!-- Spracheinstellungen -->

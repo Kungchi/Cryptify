@@ -15,9 +15,9 @@
 
     <!-- テーマオプション -->
     <string-array name="theme_options">
+        <item>システムデフォルト</item>
         <item>ライトモード</item>
         <item>ダークモード</item>
-        <item>システムデフォルト</item>
     </string-array>
 
     <!-- 言語設定 -->

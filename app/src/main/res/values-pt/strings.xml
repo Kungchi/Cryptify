@@ -15,9 +15,9 @@
 
     <!-- Opções de tema -->
     <string-array name="theme_options">
+        <item>Padrão do Sistema</item> <!-- 시스템 기본값 -->
         <item>Modo Claro</item> <!-- 라이트 모드 -->
         <item>Modo Escuro</item> <!-- 다크 모드 -->
-        <item>Padrão do Sistema</item> <!-- 시스템 기본값 -->
     </string-array>
 
     <!-- Configurações de idioma -->
