@@ -143,7 +143,7 @@ class Endecode {
                 }
             }
         } catch (e: Exception) {
-            CustomToast.show(context, context.getString(R.string.toast_no_content))
+            CustomToast.show(context, context.getString(R.string.toast_error))
             inputText
         }
     }
