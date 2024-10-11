@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment
 import com.ksh.cryptify.R
 import com.ksh.cryptify.Utility.Language
 import com.ksh.cryptify.databinding.FragmentSettingPageBinding
-import java.util.Locale
 
 class SettingPageFragment : Fragment() {
     private var _binding: FragmentSettingPageBinding? = null
@@ -19,6 +18,7 @@ class SettingPageFragment : Fragment() {
 
     private lateinit var sharedPreferences: android.content.SharedPreferences
     private lateinit var languageManager: Language
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -91,7 +91,6 @@ class SettingPageFragment : Fragment() {
             else -> 1 // 기본값은 영어
         }
         binding.languageSpinner.setSelection(languagePosition)
-        languageManager.applyLocale(savedLanguage!!)
 
         // Spinner에서 항목 선택 시 언어 변경 처리
         binding.languageSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -130,6 +129,8 @@ class SettingPageFragment : Fragment() {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()

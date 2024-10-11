@@ -19,9 +19,7 @@
             android:text="@string/setting_endecode"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:paddingBottom="8dp"
-            android:textDirection="locale"
-            android:gravity="start"/>
+            android:paddingBottom="8dp" />
 
         <View
             android:layout_width="match_parent"
@@ -40,9 +38,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/setting_setup_endecode"
                 android:textStyle="bold"
-                android:paddingTop="8dp"
-                android:textDirection="locale"
-                android:gravity="start"/>
+                android:paddingTop="8dp" />
 
             <Spinner
                 android:id="@+id/encoding_method_spinner"
@@ -50,8 +46,7 @@
                 android:layout_height="wrap_content"
                 android:entries="@array/encoding_methods"
                 android:spinnerMode="dropdown"
-                android:paddingTop="8dp"
-                android:textDirection="locale" />
+                android:textAlignment="viewStart"/>
 
             <!-- 자동 복사 기능 -->
             <LinearLayout
@@ -67,18 +62,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/setting_copy"
-                    android:layout_gravity="center_vertical"
-                    android:textDirection="locale"
-                    android:textAlignment="gravity"
-                    android:gravity="start"/>
+                    android:layout_gravity="center_vertical" />
 
                 <Switch
                     android:id="@+id/auto_copy_switch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textDirection="locale"
-                    android:textAlignment="gravity"
-                    android:gravity="start"/>
+                    android:textAlignment="viewStart"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -94,10 +84,7 @@
             android:text="@string/setting_interface"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:paddingBottom="8dp"
-            android:textDirection="locale"
-            android:textAlignment="gravity"
-            android:gravity="start"/>
+            android:paddingBottom="8dp" />
 
         <View
             android:layout_width="match_parent"
@@ -115,10 +102,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/setting_theme"
-                android:textStyle="bold"
-                android:textDirection="locale"
-                android:textAlignment="gravity"
-                android:gravity="start"/>
+                android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/theme_spinner"
@@ -127,7 +111,7 @@
                 android:entries="@array/theme_options"
                 android:spinnerMode="dropdown"
                 android:paddingTop="8dp"
-                android:textDirection="locale"/>
+                android:textAlignment="viewStart"/>
 
             <!-- 언어 설정 -->
             <TextView
@@ -135,10 +119,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/setting_Language"
                 android:textStyle="bold"
-                android:paddingTop="16dp"
-                android:textDirection="locale"
-                android:textAlignment="gravity"
-                android:gravity="start"/>
+                android:paddingTop="16dp" />
 
             <Spinner
                 android:id="@+id/language_spinner"
@@ -147,7 +128,7 @@
                 android:entries="@array/language_options"
                 android:spinnerMode="dropdown"
                 android:paddingTop="8dp"
-                android:textDirection="locale" />
+                android:textAlignment="viewStart"/>
         </LinearLayout>
 
         <!-- 구분선 -->

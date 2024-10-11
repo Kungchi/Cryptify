@@ -3,6 +3,7 @@ package com.ksh.cryptify.Utility
 import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
+import android.os.Build
 import android.text.TextUtils
 import android.view.View
 import java.util.Locale
@@ -14,10 +15,15 @@ class Language(private val context: Context) {
     // 언어 설정 적용
     fun setLanguage(languageCode: String) {
         sharedPreferences.edit().putString("language", languageCode).apply()
-        applyLocale(languageCode)
+
+        val locale = Locale(languageCode)
+        Locale.setDefault(locale)
+        val config = context.resources.configuration
+        if ( Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1 ) { config.setLocale(locale); }
+        else { config.locale = locale; }
+        context.resources.updateConfiguration(config, context.resources.displayMetrics)
 
         // RTL 지원 여부에 따라 레이아웃 방향을 즉시 변경
-        val locale = Locale(languageCode)
         val isRtl = TextUtils.getLayoutDirectionFromLocale(locale) == View.LAYOUT_DIRECTION_RTL
 
         val decorView = (context as Activity).window.decorView
@@ -27,14 +33,4 @@ class Language(private val context: Context) {
         (context as Activity).window.decorView.invalidate()
     }
 
-
-    // 로케일 설정 적용
-     fun applyLocale(languageCode: String) {
-        val locale = Locale(languageCode)
-        Locale.setDefault(locale)
-        val resources = context.resources
-        val config = resources.configuration
-        config.setLocale(locale)
-        resources.updateConfiguration(config, resources.displayMetrics)
-    }
 }
