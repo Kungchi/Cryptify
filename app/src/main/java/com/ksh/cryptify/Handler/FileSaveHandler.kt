@@ -94,7 +94,8 @@ class FileSaveHandler {
 
         fileContent?.let { content ->
             val encodedContent = Endecode().processText(context, content, true)
-            val newFileName = "${fileName}_Encode.txt"
+            val baseName = File(fileName).nameWithoutExtension
+            val newFileName = "${baseName}_Encode"
             saveFile(context, newFileName, encodedContent, toast = false)
             CustomToast.show(context, context.getString(R.string.toast_file_encode_saved, newFileName))
         } ?: run {
@@ -107,7 +108,8 @@ class FileSaveHandler {
 
         fileContent?.let { content ->
             val decodedContent = Endecode().processText(context, content, false)
-            val newFileName = "${fileName}_Decode.txt"
+            val baseName = File(fileName).nameWithoutExtension
+            val newFileName = "${baseName}_Decode"
             saveFile(context, newFileName, decodedContent, toast = false)
             CustomToast.show(context, context.getString(R.string.toast_file_decode_saved, newFileName))
         } ?: run {

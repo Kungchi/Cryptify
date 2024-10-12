@@ -46,7 +46,7 @@
     <string name="setting_interface">إعدادات الواجهة</string> <!-- 인터페이스 설정 -->
     <string name="setting_theme">إعدادات السمة</string> <!-- 테마 설정 -->
     <string name="setting_Language">إعدادات اللغة</string> <!-- 언어 설정 -->
-    <string name="setting_Guide">دليل المستخدم</string> <!-- 사용자 가이드 -->
+    <string name="setting_Guide">سياسة الخصوصية</string> <!-- 사용자 가이드 -->
     <string name="setting_feedback">تقرير الأخطاء والتعليقات</string> <!-- 버그 신고 및 피드백 -->
 
     <!-- صفحة الملف -->

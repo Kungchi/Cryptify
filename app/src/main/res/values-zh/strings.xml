@@ -46,7 +46,7 @@
     <string name="setting_interface">界面设置</string>
     <string name="setting_theme">主题设置</string>
     <string name="setting_Language">语言设置</string>
-    <string name="setting_Guide">用户指南</string>
+    <string name="setting_Guide">隐私政策</string>
     <string name="setting_feedback">错误报告与反馈</string>
 
     <!-- 文件页面 -->

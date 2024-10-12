@@ -46,7 +46,7 @@
     <string name="setting_interface">इंटरफ़ेस सेटिंग</string> <!-- 인터페이스 설정 -->
     <string name="setting_theme">थीम सेटिंग</string> <!-- 테마 설정 -->
     <string name="setting_Language">भाषा सेटिंग</string> <!-- 언어 설정 -->
-    <string name="setting_Guide">उपयोगकर्ता गाइड</string> <!-- 사용자 가이드 -->
+    <string name="setting_Guide">गोपनीयता नीति</string> <!-- 사용자 가이드 -->
     <string name="setting_feedback">बग रिपोर्ट और फीडबैक</string> <!-- 버그 신고 및 피드백 -->
 
     <!-- फ़ाइल पेज -->

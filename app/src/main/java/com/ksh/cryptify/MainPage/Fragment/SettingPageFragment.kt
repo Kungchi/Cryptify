@@ -1,6 +1,8 @@
 package com.ksh.cryptify.MainPage.Fragment
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +11,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
+import com.ksh.cryptify.MainPage.MainPageActivity
 import com.ksh.cryptify.R
 import com.ksh.cryptify.Utility.Language
 import com.ksh.cryptify.databinding.FragmentSettingPageBinding
@@ -38,6 +41,11 @@ class SettingPageFragment : Fragment() {
         setup_theme()
 
         switch_checked()
+
+        binding.policyButton.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://doc-hosting.flycricket.io/cryptify-decode-encode/fc3deb52-6d52-43d8-81c7-c5578e0cbc59/privacy"))
+            startActivity(intent)
+        }
 
         return binding.root
     }

@@ -46,7 +46,7 @@
     <string name="setting_interface">Настройки интерфейса</string> <!-- 인터페이스 설정 -->
     <string name="setting_theme">Настройки темы</string> <!-- 테마 설정 -->
     <string name="setting_Language">Настройки языка</string> <!-- 언어 설정 -->
-    <string name="setting_Guide">Руководство пользователя</string> <!-- 사용자 가이드 -->
+    <string name="setting_Guide">Политика конфиденциальности</string> <!-- 사용자 가이드 -->
     <string name="setting_feedback">Сообщить об ошибках и отзывы</string> <!-- 버그 신고 및 피드백 -->
 
     <!-- Страница файла -->

@@ -46,7 +46,7 @@
     <string name="setting_interface">インターフェース設定</string>
     <string name="setting_theme">テーマ設定</string>
     <string name="setting_Language">言語設定</string>
-    <string name="setting_Guide">ユーザーガイド</string>
+    <string name="setting_Guide">プライバシーポリシー</string>
     <string name="setting_feedback">バグ報告とフィードバック</string>
 
     <!-- ファイルページ -->
