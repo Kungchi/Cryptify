@@ -1,4 +1,4 @@
-package com.ksh.cryptify.MainPage.Fragment
+package com.ksh.cryptify.Page.MainPage.Fragment
 
 import android.Manifest
 import android.app.Activity
@@ -20,7 +20,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.ksh.cryptify.Handler.CameraHandler
 import com.ksh.cryptify.Handler.FileSaveHandler
-import com.ksh.cryptify.OverlayPage.OverlayActivity
+import com.ksh.cryptify.Page.OverlayPage.OverlayActivity
 import com.ksh.cryptify.R
 import com.ksh.cryptify.Utility.CustomToast
 import com.ksh.cryptify.Utility.Endecode

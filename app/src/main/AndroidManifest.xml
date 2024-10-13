@@ -38,11 +38,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainPage.MainPageActivity"
+            android:name=".Page.MainPage.MainPageActivity"
             android:exported="true">
         </activity>
         <activity
-            android:name=".OverlayPage.OverlayActivity"
+            android:name=".Page.OverlayPage.OverlayActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Page.FeedbackPage.FeedbackPageActivity"
             android:exported="true">
         </activity>
 

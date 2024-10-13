@@ -1,3 +1,5 @@
+import com.android.build.api.variant.BuildConfigField
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -15,6 +17,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "SERVICE_ID", "${property("SERVICE_ID")}")
+        buildConfigField("String", "TEMPLATE_ID", "${property("TEMPLATE_ID")}")
+        buildConfigField("String", "USER_ID", "${property("USER_ID")}")
     }
 
     buildTypes {
@@ -36,6 +42,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -65,4 +72,7 @@ dependencies {
     implementation("commons-codec:commons-codec:1.15")
 
     testImplementation("junit:junit:4.13.2")
+
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 }

@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/MainPageFragment"
-        android:name="com.ksh.cryptify.MainPage.Fragment.MainPageFragment"
+        android:name="com.ksh.cryptify.Page.MainPage.Fragment.MainPageFragment"
         android:label="MainPageFragment"
         tools:layout="@layout/fragment_main_page" />
 
     <fragment
         android:id="@+id/FilePageFrgment"
-        android:name="com.ksh.cryptify.MainPage.Fragment.FilePageFragment"
+        android:name="com.ksh.cryptify.Page.MainPage.Fragment.FilePageFragment"
         android:label="FileFrgment"
         tools:layout="@layout/fragment_file_page" />
 
     <fragment
         android:id="@+id/SettingPageFrgment"
-        android:name="com.ksh.cryptify.MainPage.Fragment.SettingPageFragment"
+        android:name="com.ksh.cryptify.Page.MainPage.Fragment.SettingPageFragment"
         android:label="SettingFrgment"
         tools:layout="@layout/fragment_setting_page" />
 </navigation>

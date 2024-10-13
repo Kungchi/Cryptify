@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import com.ksh.cryptify.MainPage.MainPageActivity
+import com.ksh.cryptify.Page.MainPage.MainPageActivity
 import com.ksh.cryptify.Utility.Language
 import java.util.Locale
 

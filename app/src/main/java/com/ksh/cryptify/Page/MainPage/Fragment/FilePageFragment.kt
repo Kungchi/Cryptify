@@ -1,4 +1,4 @@
-package com.ksh.cryptify.MainPage.Fragment
+package com.ksh.cryptify.Page.MainPage.Fragment
 
 import android.app.Activity
 import android.content.Intent

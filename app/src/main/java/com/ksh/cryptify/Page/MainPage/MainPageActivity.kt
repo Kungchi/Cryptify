@@ -1,4 +1,4 @@
-package com.ksh.cryptify.MainPage
+package com.ksh.cryptify.Page.MainPage
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
