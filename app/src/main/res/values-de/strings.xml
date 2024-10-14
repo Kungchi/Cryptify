@@ -80,6 +80,9 @@
     <string name="menu_home">Startseite</string> <!-- 홈 -->
     <string name="menu_file">Datei</string> <!-- 파일 -->
     <string name="menu_setting">Einstellungen</string>
-    <string name="toast_error">Dieser Text kann nicht codiert/decodiert werden.</string> <!-- 설정 -->
+    <string name="toast_error">Dieser Text kann nicht codiert/decodiert werden.</string>
+    <string name="Retrofit_Success">Feedback wurde erfolgreich gesendet!</string>
+    <string name="Retrofit_Fail">Fehler beim Senden des Feedbacks.</string>
+    <string name="content_please">Bitte geben Sie den Inhalt ein</string> <!-- 설정 -->
 
 </resources>

@@ -80,6 +80,9 @@
     <string name="menu_home">Главная</string> <!-- 홈 -->
     <string name="menu_file">Файл</string> <!-- 파일 -->
     <string name="menu_setting">Настройки</string>
-    <string name="toast_error">Этот текст не может быть закодирован/декодирован.</string> <!-- 설정 -->
+    <string name="toast_error">Этот текст не может быть закодирован/декодирован.</string>
+    <string name="Retrofit_Success">Отзыв успешно отправлен!</string>
+    <string name="Retrofit_Fail">Не удалось отправить отзыв.</string>
+    <string name="content_please">Пожалуйста, введите содержимое</string> <!-- 설정 -->
 
 </resources>

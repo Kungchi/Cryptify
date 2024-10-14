@@ -21,6 +21,12 @@ android {
         buildConfigField("String", "SERVICE_ID", "${property("SERVICE_ID")}")
         buildConfigField("String", "TEMPLATE_ID", "${property("TEMPLATE_ID")}")
         buildConfigField("String", "USER_ID", "${property("USER_ID")}")
+
+        buildConfigField("String", "ad_ID", "${property("ad_ID")}")
+        buildConfigField("String", "ad_interstitial", "${property("ad_interstitial")}")
+
+        buildConfigField("String", "ad_testID", "${property("ad_testID")}")
+        buildConfigField("String", "ad_testinterstitial", "${property("ad_testinterstitial")}")
     }
 
     buildTypes {
@@ -75,4 +81,7 @@ dependencies {
 
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
+    //애드몹
+    implementation("com.google.android.gms:play-services-ads:23.3.0")
 }

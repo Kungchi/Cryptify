@@ -81,5 +81,8 @@
     <string name="menu_file">File</string>
     <string name="menu_setting">Settings</string>
     <string name="toast_error">This text cannot be encoded/decoded.</string>
+    <string name="Retrofit_Success">Feedback has been successfully sent!</string>
+    <string name="Retrofit_Fail">Failed to send feedback.</string>
+    <string name="content_please">Please enter content</string>
 
 </resources>

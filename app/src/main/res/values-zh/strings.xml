@@ -81,4 +81,7 @@
     <string name="menu_file">文件</string>
     <string name="menu_setting">设置</string>
     <string name="toast_error">无法编码/解码的文本。</string>
+    <string name="Retrofit_Success">反馈已成功发送！</string>
+    <string name="Retrofit_Fail">反馈发送失败。</string>
+    <string name="content_please">请输入内容</string>
 </resources>

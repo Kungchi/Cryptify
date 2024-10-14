@@ -80,5 +80,8 @@
     <string name="menu_home">होम</string> <!-- 홈 -->
     <string name="menu_file">फ़ाइल</string> <!-- 파일 -->
     <string name="menu_setting">सेटिंग</string>
-    <string name="toast_error">इस पाठ को एन्कोड/डिकोड नहीं किया जा सकता है।</string> <!-- 설정 -->
+    <string name="toast_error">इस पाठ को एन्कोड/डिकोड नहीं किया जा सकता है।</string>
+    <string name="Retrofit_Success">प्रतिक्रिया सफलतापूर्वक भेजी गई है!</string>
+    <string name="Retrofit_Fail">प्रतिक्रिया भेजने में विफल।</string>
+    <string name="content_please">कृपया सामग्री दर्ज करें</string> <!-- 설정 -->
 </resources>

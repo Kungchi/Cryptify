@@ -81,5 +81,8 @@
     <string name="menu_file">ファイル</string>
     <string name="menu_setting">設定</string>
     <string name="toast_error">このテキストはエンコード/デコードできません。</string>
+    <string name="Retrofit_Success">フィードバックが正常に送信されました！</string>
+    <string name="Retrofit_Fail">フィードバックの送信に失敗しました。</string>
+    <string name="content_please">内容を入力してください</string>
 
 </resources>

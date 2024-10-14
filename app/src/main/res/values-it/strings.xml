@@ -80,6 +80,9 @@
     <string name="menu_home">Home</string> <!-- 홈 -->
     <string name="menu_file">File</string> <!-- 파일 -->
     <string name="menu_setting">Impostazioni</string>
-    <string name="toast_error">Questo testo non può essere codificato/decodificato.</string> <!-- 설정 -->
+    <string name="toast_error">Questo testo non può essere codificato/decodificato.</string>
+    <string name="Retrofit_Success">Il feedback è stato inviato con successo!</string>
+    <string name="Retrofit_Fail">Invio del feedback non riuscito.</string>
+    <string name="content_please">Inserisci il contenuto</string> <!-- 설정 -->
 
 </resources>

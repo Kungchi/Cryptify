@@ -80,6 +80,9 @@
     <string name="menu_home">ہوم</string> <!-- 홈 -->
     <string name="menu_file">فائل</string> <!-- 파일 -->
     <string name="menu_setting">سیٹنگ</string>
-    <string name="toast_error">اس متن کو انکوڈ/ڈیکوڈ نہیں کیا جا سکتا۔</string> <!-- 설정 -->
+    <string name="toast_error">اس متن کو انکوڈ/ڈیکوڈ نہیں کیا جا سکتا۔</string>
+    <string name="Retrofit_Success">آپ کی رائے کامیابی سے بھیج دی گئی ہے!</string>
+    <string name="Retrofit_Fail">رائے بھیجنے میں ناکامی ہوئی۔</string>
+    <string name="content_please">براہ کرم مواد درج کریں</string> <!-- 설정 -->
 
 </resources>

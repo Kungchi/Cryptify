@@ -80,6 +80,9 @@
     <string name="menu_home">Accueil</string> <!-- 홈 -->
     <string name="menu_file">Fichier</string> <!-- 파일 -->
     <string name="menu_setting">Paramètres</string>
-    <string name="toast_error">Ce texte ne peut pas être encodé/décodé.</string> <!-- 설정 -->
+    <string name="toast_error">Ce texte ne peut pas être encodé/décodé.</string>
+    <string name="Retrofit_Success">Les retours ont été envoyés avec succès !</string>
+    <string name="Retrofit_Fail">Échec de l\'envoi des retours.</string>
+    <string name="content_please">Veuillez entrer le contenu</string> <!-- 설정 -->
 
 </resources>

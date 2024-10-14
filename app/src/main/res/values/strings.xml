@@ -89,4 +89,7 @@
     <string name="menu_home">홈</string>
     <string name="menu_file">파일</string>
     <string name="menu_setting">설정</string>
+    <string name="Retrofit_Success">피드백이 성공적으로 전송되었습니다!</string>
+    <string name="Retrofit_Fail">피드백 전송에 실패했습니다.</string>
+    <string name="content_please">내용을 입력해주세요</string>
 </resources>
