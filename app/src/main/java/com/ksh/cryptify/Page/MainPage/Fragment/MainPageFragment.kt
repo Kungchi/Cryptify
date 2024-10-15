@@ -18,6 +18,11 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import com.ksh.cryptify.BuildConfig
 import com.ksh.cryptify.Handler.CameraHandler
 import com.ksh.cryptify.Handler.FileSaveHandler
 import com.ksh.cryptify.Page.OverlayPage.OverlayActivity
@@ -34,6 +39,8 @@ class MainPageFragment : Fragment() {
     private lateinit var endecode: Endecode
     private lateinit var sharedPreferences: android.content.SharedPreferences
 
+    private var mInterstitialAd: InterstitialAd? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -44,10 +51,30 @@ class MainPageFragment : Fragment() {
         sharedPreferences = requireContext().getSharedPreferences("settings", Context.MODE_PRIVATE)
 
         buttonGroup()
+
+        val adRequest = AdRequest.Builder().build()
+
+        InterstitialAd.load(requireContext(), BuildConfig.ad_testinterstitial, adRequest, object : InterstitialAdLoadCallback() {
+            override fun onAdFailedToLoad(adError: LoadAdError) {
+                Log.d("MainPageFragment", adError.toString())
+                mInterstitialAd = null
+            }
+
+            override fun onAdLoaded(interstitialAd: InterstitialAd) {
+                Log.d("MainPageFragment", "Ad was loaded.")
+                mInterstitialAd = interstitialAd
+            }
+        })
+
         return binding.root
     }
     private fun buttonGroup() {
         binding.encodeBtn.setOnClickListener {
+            if (mInterstitialAd != null) {
+                mInterstitialAd?.show(requireActivity())
+            } else {
+                Log.d("MainPageFragment", "The interstitial ad wasn't ready yet.")
+            }
             binding.textView.text = ""
             val inputText = binding.editText.text.toString()
             val encodeData = endecode.processText(requireContext(), inputText, true)
@@ -58,6 +85,11 @@ class MainPageFragment : Fragment() {
             }
         }
         binding.decodeBtn.setOnClickListener {
+            if (mInterstitialAd != null) {
+                mInterstitialAd?.show(requireActivity())
+            } else {
+                Log.d("MainPageFragment", "The interstitial ad wasn't ready yet.")
+            }
             binding.textView.text = ""
             val inputText = binding.editText.text.toString()
             val decodeData = endecode.processText(requireContext(), inputText, false)

@@ -62,7 +62,6 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="TO_BE_SET_DYNAMICALLY"/>
-
+            android:value="${ad_testID}"/>
     </application>
 </manifest>

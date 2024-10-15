@@ -1,4 +1,5 @@
-import com.android.build.api.variant.BuildConfigField
+import java.io.FileInputStream
+import java.util.Properties
 
 plugins {
     alias(libs.plugins.android.application)
@@ -18,14 +19,15 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "SERVICE_ID", "${property("SERVICE_ID")}")
-        buildConfigField("String", "TEMPLATE_ID", "${property("TEMPLATE_ID")}")
-        buildConfigField("String", "USER_ID", "${property("USER_ID")}")
+        buildConfigField("String", "SERVICE_ID", property("SERVICE_ID") as String)
+        buildConfigField("String", "TEMPLATE_ID", property("TEMPLATE_ID") as String)
+        buildConfigField("String", "USER_ID", property("USER_ID") as String)
 
-        buildConfigField("String", "ad_ID", "${property("ad_ID")}")
+        //애드몹
+        manifestPlaceholders["ad_ID"] = property("ad_ID") as String
         buildConfigField("String", "ad_interstitial", "${property("ad_interstitial")}")
 
-        buildConfigField("String", "ad_testID", "${property("ad_testID")}")
+        manifestPlaceholders["ad_testID"] = property("ad_testID") as String
         buildConfigField("String", "ad_testinterstitial", "${property("ad_testinterstitial")}")
     }
 
@@ -82,6 +84,5 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 
-    //애드몹
     implementation("com.google.android.gms:play-services-ads:23.3.0")
 }
